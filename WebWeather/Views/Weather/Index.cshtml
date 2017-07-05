@@ -1,0 +1,39 @@
+﻿@model WebWeather.Models.Forecast
+
+@{
+    ViewBag.Title = "Weather";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    
+</head>
+
+<body align="center">
+    <br />
+
+    @using (Html.BeginForm("Index", "Weather", FormMethod.Post))
+    {
+
+     <p> @Html.RadioButton("city", "Dnipropetrovsk") Dnipro&emsp;&emsp;
+    @Html.RadioButton("city", "Kharkiv",true) Kharkiv&emsp;&emsp;
+    @Html.RadioButton("city", "Kiev") Kiev&emsp;&emsp;
+    @Html.RadioButton("city", "Lviv") Lviv&emsp;&emsp;
+    @Html.RadioButton("city", "Odessa") Odessa</p>
+   <p>  @Html.ActionLink("Other city","OtherCity") </p>
+
+<p> You want a forecast for 
+    @Html.DropDownList("numOfDays", new List<SelectListItem>
+      { new SelectListItem{ Text = "Today", Value = "1"},
+      new SelectListItem{ Text = "3 Days", Value = "3"},
+      new SelectListItem{ Text = "A Week", Value = "7"}})
+</p>
+
+     <input type="submit" value="Get!" />
+    }
+
+    @Html.Partial("Result", Model)
+</body>
+</html>

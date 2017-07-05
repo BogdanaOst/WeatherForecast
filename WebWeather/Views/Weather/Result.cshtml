@@ -1,0 +1,41 @@
+﻿@model WebWeather.Models.Forecast
+<style type="text/css">
+    table {
+        color: #008B8B;
+    }
+
+    td {
+        background: #E0FFFF;
+    }
+</style>
+<body>
+    @if (Model != null)
+    {
+        <p><strong> It's weather in @Model.city: </strong></p>
+        <table class="table-bordered" align="center" >
+
+            <tr>
+                <td>Date</td>
+                <td align="center">Morning</td>
+                <td align="center">Afternoon</td>
+                <td align="center">Evening</td>
+                <td align="center">Night</td>
+                <td align="center">Pressure</td>
+                <td align="center"></td>
+            </tr>
+            @foreach (var d in Model.GetDailyList())
+            {
+                <tr>
+                    <td align="center"> @d.date </td>
+                    <td align="center"> @d.morningTemp °C </td>
+                    <td align="center"> @d.dayTemp °C </td>
+                    <td align="center"> @d.eveningTemp °C </td>
+                    <td align="center"> @d.nightTemp °C </td>
+                    <td align="center"> @d.pressure hPa </td>
+                    <td><img src="@d.icon" height="50" width="50"></td>
+
+                </tr>
+            }
+        </table>
+    }
+</body>
