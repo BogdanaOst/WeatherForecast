@@ -23,7 +23,7 @@ namespace WebWeather.Controllers
         {
             if (!string.IsNullOrWhiteSpace(parametrs.city))
             {
-                ForecastService service = new ForecastService(parametrs.city, parametrs.numOfDays);
+                ForecastService service = new ForecastService(parametrs);
                 forecast = service.GetForecast();
 
                 return View(forecast);

@@ -1,41 +1,42 @@
 ﻿@model WebWeather.Models.Forecast
-<style type="text/css">
-    table {
-        color: #008B8B;
-    }
 
-    td {
-        background: #E0FFFF;
-    }
-</style>
 <body>
     @if (Model != null)
     {
+        <br />
         <p><strong> It's weather in @Model.city: </strong></p>
-        <table class="table-bordered" align="center" >
+        <br />
+        <table align="center">
+         <tr>
+            <td>
+                <table class="table-bordered">
+                    <tr><td><br /></td></tr>
+                    <tr><td align="center">Morning</td></tr>
+                    <tr><td align="center">Afternoon</td></tr>
+                    <tr><td align="center">Evening</td></tr>
+                    <tr><td align="center">Night</td></tr>
+                    <tr><td align="center">Pressure</td></tr>
+                    <tr><td align="center"> <br /><br /><br /></td></tr>
 
-            <tr>
-                <td>Date</td>
-                <td align="center">Morning</td>
-                <td align="center">Afternoon</td>
-                <td align="center">Evening</td>
-                <td align="center">Night</td>
-                <td align="center">Pressure</td>
-                <td align="center"></td>
-            </tr>
-            @foreach (var d in Model.GetDailyList())
-            {
-                <tr>
-                    <td align="center"> @d.date </td>
-                    <td align="center"> @d.morningTemp °C </td>
-                    <td align="center"> @d.dayTemp °C </td>
-                    <td align="center"> @d.eveningTemp °C </td>
-                    <td align="center"> @d.nightTemp °C </td>
-                    <td align="center"> @d.pressure hPa </td>
-                    <td><img src="@d.icon" height="50" width="50"></td>
+                </table>
+            </td>
+                @foreach (var d in Model.GetDailyList())
+                {
+                    <td>
+                    <table class="table-bordered">
+                        
+                           <tr><td align="center" bgcolor="#26F4BA"> @d.date </td></tr>
+                           <tr><td align="center" bgcolor="#A6FCFE"> @d.morningTemp °C </td></tr>
+                           <tr><td align="center" bgcolor="#7CFCFE"> @d.dayTemp °C </td></tr>
+                           <tr><td align="center" bgcolor="#2DFCFF"> @d.eveningTemp °C </td></tr>
+                           <tr><td align="center" bgcolor="#4FE4FA"> @d.nightTemp °C </td></tr>
+                           <tr><td align="center" bgcolor="#45C0FD"> @d.pressure hPa </td></tr>
+                           <tr><td bgcolor="#E0FFFF"><img src="@d.icon" height="60" width="60"></td></tr>
 
-                </tr>
-            }
-        </table>
-    }
+                        </table>
+                        </td>
+                  }
+    </tr>
+    </table>
+      }
 </body>

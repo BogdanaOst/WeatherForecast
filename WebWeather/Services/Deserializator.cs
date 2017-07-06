@@ -10,10 +10,10 @@ namespace WebWeather.Services
 {
     public class Deserializator
     {
-        public Forecast Get(string city, int days)
+        public Forecast Get(Parametrs parametrs)
         {
             
-             string path = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city+"&units=metric&APPID=030e0de55deb68d47090aec778996d58";
+             string path = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + parametrs.city+"&units=metric&APPID=030e0de55deb68d47090aec778996d58";
 
                  WebClient client = new WebClient();
             try
@@ -21,7 +21,7 @@ namespace WebWeather.Services
                 string jsonInfo = @"" + (client.DownloadString(path)).Replace('"', '\'');
 
                 Forecast forecast = new Forecast(JsonConvert.DeserializeObject<RootObject>(jsonInfo));
-                forecast.SetDays(days);
+                forecast.SetDays(parametrs.numOfDays);
                 return forecast;
             }
             catch(Exception)

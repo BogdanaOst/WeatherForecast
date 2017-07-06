@@ -8,16 +8,14 @@ namespace WebWeather.Services
 {
     public class ForecastService
     {
-        private string city;
-        private int numOfDays;
+       
         private Forecast forecast;
         
-        public ForecastService(string city, int days)
+        public ForecastService(Parametrs parametrs)
         {
-            this.city = city;
-            numOfDays = days;
+            
             Deserializator deserial = new Deserializator();
-            forecast = deserial.Get(city,days);
+            forecast = deserial.Get(parametrs);
 
         }
 
