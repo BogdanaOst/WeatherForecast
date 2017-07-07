@@ -17,8 +17,8 @@
     @using (Html.BeginForm("Index", "Weather", FormMethod.Post))
     {
         <p>Enter your city. If something goes wrong, You'll be redirected to main page.</p>
-        <p>@Html.TextBox("city")</p>
-        <p>You want a forecast for  @Html.DropDownList("numOfDays", new List<SelectListItem>
+        <p>@Html.TextBox("CityName")</p>
+        <p>You want a forecast for  @Html.DropDownList("NumOfDays", new List<SelectListItem>
       { new SelectListItem{ Text = "For Today", Value = "1"},
       new SelectListItem{ Text = "For 3 Days", Value = "3"},
       new SelectListItem{ Text = "For a week", Value = "7"}})</p>

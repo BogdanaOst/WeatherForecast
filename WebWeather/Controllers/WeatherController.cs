@@ -21,11 +21,10 @@ namespace WebWeather.Controllers
         [HttpPost]
         public ActionResult Index(Parametrs parametrs)
         {
-            if (!string.IsNullOrWhiteSpace(parametrs.city))
+            if (!string.IsNullOrWhiteSpace(parametrs.CityName))
             {
-                ForecastService service = new ForecastService(parametrs);
-                forecast = service.GetForecast();
-
+                ForecastService service = new ForecastService();
+                forecast = service.GetForecast(parametrs);
                 return View(forecast);
             }
             else

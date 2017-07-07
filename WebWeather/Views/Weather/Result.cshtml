@@ -4,7 +4,7 @@
     @if (Model != null)
     {
         <br />
-        <p><strong> It's weather in @Model.city: </strong></p>
+        <p><strong> It's weather in @Model.City: </strong></p>
         <br />
         <table align="center">
          <tr>
@@ -25,13 +25,13 @@
                     <td>
                     <table class="table-bordered">
                         
-                           <tr><td align="center" bgcolor="#26F4BA"> @d.date </td></tr>
-                           <tr><td align="center" bgcolor="#A6FCFE"> @d.morningTemp °C </td></tr>
-                           <tr><td align="center" bgcolor="#7CFCFE"> @d.dayTemp °C </td></tr>
-                           <tr><td align="center" bgcolor="#2DFCFF"> @d.eveningTemp °C </td></tr>
-                           <tr><td align="center" bgcolor="#4FE4FA"> @d.nightTemp °C </td></tr>
-                           <tr><td align="center" bgcolor="#45C0FD"> @d.pressure hPa </td></tr>
-                           <tr><td bgcolor="#E0FFFF"><img src="@d.icon" height="60" width="60"></td></tr>
+                           <tr><td align="center" bgcolor="#26F4BA"> @d.Date </td></tr>
+                           <tr><td align="center" bgcolor="#A6FCFE"> @d.MorningTemp °C </td></tr>
+                           <tr><td align="center" bgcolor="#7CFCFE"> @d.DayTemp °C </td></tr>
+                           <tr><td align="center" bgcolor="#2DFCFF"> @d.EveningTemp °C </td></tr>
+                           <tr><td align="center" bgcolor="#4FE4FA"> @d.NightTemp °C </td></tr>
+                           <tr><td align="center" bgcolor="#45C0FD"> @d.Pressure hPa </td></tr>
+                           <tr><td bgcolor="#E0FFFF"><img src="@d.Icon" height="60" width="60"></td></tr>
 
                         </table>
                         </td>

@@ -8,7 +8,7 @@ namespace WebWeather.Models
 {
     public class Parametrs
     {
-        public string city { get; set; }
-        public int numOfDays { get; set; }
+        public string CityName { get; set; }
+        public int NumOfDays { get; set; }
     }
 }
