@@ -10,11 +10,18 @@ namespace WebWeather.Controllers
 {
     public class WeatherController : Controller
     {
-        private Forecast forecast;
+
+        IForecastService service;
+
+        public WeatherController(IForecastService iservice)
+        {
+            service = iservice;
+        }
 
         // GET: Weather
         public ActionResult Index()
         {
+            
             return View();
         }
 
@@ -23,8 +30,8 @@ namespace WebWeather.Controllers
         {
             if (!string.IsNullOrWhiteSpace(parametrs.CityName))
             {
-                ForecastService service = new ForecastService();
-                forecast = service.GetForecast(parametrs);
+                
+                Forecast forecast = service.GetForecast(parametrs);
                 return View(forecast);
             }
             else
@@ -33,7 +40,7 @@ namespace WebWeather.Controllers
         public ActionResult OtherCity()
         {
            
-            return View(forecast);
+            return View();
         }
     }
 }

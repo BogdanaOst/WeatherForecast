@@ -45,3 +45,10 @@ c:\users\dana\documents\visual studio 2015\Projects\WebWeather\WebWeather\bin\ru
 c:\users\dana\documents\visual studio 2015\Projects\WebWeather\WebWeather\obj\Debug\WebWeather.dll
 c:\users\dana\documents\visual studio 2015\Projects\WebWeather\WebWeather\obj\Debug\WebWeather.pdb
 C:\Users\Dana\documents\visual studio 2015\Projects\WebWeather\WebWeather\obj\Debug\WebWeather.csprojResolveAssemblyReference.cache
+C:\Users\Dana\Documents\Visual Studio 2015\Projects\WebWeather\WebWeather\bin\Ninject.dll
+C:\Users\Dana\Documents\Visual Studio 2015\Projects\WebWeather\WebWeather\bin\Ninject.xml
+C:\Users\Dana\Documents\Visual Studio 2015\Projects\WebWeather\WebWeather\bin\Ninject.Web.Common.dll
+C:\Users\Dana\Documents\Visual Studio 2015\Projects\WebWeather\WebWeather\bin\Ninject.Web.dll
+C:\Users\Dana\Documents\Visual Studio 2015\Projects\WebWeather\WebWeather\bin\WebActivatorEx.dll
+C:\Users\Dana\Documents\Visual Studio 2015\Projects\WebWeather\WebWeather\bin\Ninject.Web.xml
+C:\Users\Dana\Documents\Visual Studio 2015\Projects\WebWeather\WebWeather\bin\Ninject.Web.Common.xml
