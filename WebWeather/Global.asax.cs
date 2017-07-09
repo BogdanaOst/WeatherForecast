@@ -34,7 +34,7 @@ namespace WebWeather
 
                         oHttpContext.Response.StatusCode = 404;
                         oHttpContext.Response.StatusDescription = "Not Found";
-                       // oHttpContext.Response.Charset = "windows-1251";
+                        //oHttpContext.Response.Charset = "windows-1251";
 
                         oHttpContext.Server.TransferRequest("~/Weather/");
 

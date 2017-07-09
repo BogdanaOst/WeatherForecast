@@ -9,20 +9,25 @@ using WebWeather.Models;
 
 namespace WebWeather.Services
 {
-    public class ForecastService
+    public class ForecastService : IForecastService
     {
        
-        private Forecast forecast;
-        
-   
+
         public Forecast GetForecast(Parametrs parametrs)
         {
             var appSettings = ConfigurationManager.AppSettings;
             string path = appSettings["BaseUrl"] + "q=" + parametrs.CityName + "&units=metric&cnt=" +parametrs.NumOfDays+"&APPID="+appSettings["ApiKey"];
             WebClient client = new WebClient();
-            string jsonInfo = @"" + (client.DownloadString(path)).Replace('"', '\'');
-            forecast = new Forecast(JsonConvert.DeserializeObject<RootObject>(jsonInfo));
-            return forecast;
+            try
+            {
+                string jsonInfo = @"" + (client.DownloadString(path)).Replace('"', '\'');
+                Forecast forecast = new Forecast(JsonConvert.DeserializeObject<RootObject>(jsonInfo));
+                return forecast;
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
         }
 
     }

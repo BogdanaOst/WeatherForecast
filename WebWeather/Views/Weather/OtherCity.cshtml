@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-
+    <link rel="stylesheet" href="~/Content/StyleSheet.css">
 </head>
 
 <body align="center">
@@ -21,9 +21,9 @@
         <p>You want a forecast for  @Html.DropDownList("NumOfDays", new List<SelectListItem>
       { new SelectListItem{ Text = "For Today", Value = "1"},
       new SelectListItem{ Text = "For 3 Days", Value = "3"},
-      new SelectListItem{ Text = "For a week", Value = "7"}})</p>
+      new SelectListItem{ Text = "For a week", Value = "7"}},new { @class = "btn btn-default dropdown-toggle" })</p>
 
-        <input type="submit" value="Get!" />
+     <button type="submit">Get!</button>
     }
 
     @Html.Partial("Result", Model)

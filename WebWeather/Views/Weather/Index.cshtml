@@ -7,6 +7,7 @@
 
 <html>
 <head>
+    <link rel="stylesheet" href="~/Content/StyleSheet.css">
     <meta name="viewport" content="width=device-width" />
     
 </head>
@@ -14,26 +15,28 @@
 <body align="center">
     <br />
 
-    @using (Html.BeginForm("Index", "Weather", FormMethod.Post))
-    {
+        @using (Html.BeginForm("Index", "Weather", FormMethod.Post))
+        {
 
-     <p> @Html.RadioButton("CityName", "Dnipropetrovsk") Dnipro&emsp;&emsp;
-    @Html.RadioButton("CityName", "Kharkiv",true) Kharkiv&emsp;&emsp;
+    <p>
+    @Html.RadioButton("CityName", "Dnipropetrovsk") Dnipro&emsp;&emsp;
+    @Html.RadioButton("CityName", "Kharkiv") Kharkiv&emsp;&emsp;
     @Html.RadioButton("CityName", "Kiev") Kiev&emsp;&emsp;
     @Html.RadioButton("CityName", "Lviv") Lviv&emsp;&emsp;
     @Html.RadioButton("CityName", "Odessa") Odessa</p>
-   <p>  @Html.ActionLink("Other city","OtherCity") </p>
-
-<p> You want a forecast for 
-    @Html.DropDownList("NumOfDays", new List<SelectListItem>
+    @Html.ActionLink("Other City","OtherCity")
+    <br />
+    <br />
+        <p>
+            You want a forecast for
+            @Html.DropDownList("NumOfDays", new List<SelectListItem>
       { new SelectListItem{ Text = "Today", Value = "1"},
       new SelectListItem{ Text = "3 Days", Value = "3"},
-      new SelectListItem{ Text = "A Week", Value = "7"}})
-</p>
+      new SelectListItem{ Text = "A Week", Value = "7"}}, new { @class = "btn btn-default dropdown-toggle" })
+        </p>
 
-     <input type="submit" value="Get!" />
-    }
-
+        <button type="submit" >Get!</button>
+        }
     @Html.Partial("Result", Model)
 </body>
 </html>

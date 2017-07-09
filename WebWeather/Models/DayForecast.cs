@@ -62,10 +62,10 @@ namespace WebWeather.Models
 
     public class DayForecast
     {
-        public double MorningTemp { get; set; }
-        public double EveningTemp { get; set; }
+        
         public double DayTemp { get; set; }
-        public double NightTemp { get; set; }
+        public double MinTemp { get; set; }
+        public double MaxTemp { get; set; }
         public double Pressure { get; set; }
         public string Icon { get; set; }
         public string Date { get; set; }
@@ -84,9 +84,8 @@ namespace WebWeather.Models
                 DayForecast dayF = new DayForecast()
                 {
                     DayTemp = d.Temp.Day,
-                    MorningTemp = d.Temp.Morn,
-                    EveningTemp = d.Temp.Eve,
-                    NightTemp = d.Temp.Night,
+                    MaxTemp = d.Temp.Max,
+                    MinTemp = d.Temp.Min,
                     Pressure = d.Pressure,
                     Icon = "http://openweathermap.org/img/w/" + d.Weather.FirstOrDefault().Icon + ".png",
                     Date = DateTime.Now.AddDays(i).ToShortDateString()

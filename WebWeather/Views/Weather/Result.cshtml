@@ -1,37 +1,35 @@
 ﻿@model WebWeather.Models.Forecast
-
+<style>
+    th {
+        font-family: Monotype Corsiva;
+        font-size: 20px;
+        text-align:center;
+    }
+    td{
+        font-size: 13px;
+    }
+</style>
 <body>
     @if (Model != null)
     {
         <br />
-        <p><strong> It's weather in @Model.City: </strong></p>
+        <h4><strong> It's weather in @Model.City: </strong></h4>
         <br />
         <table align="center">
          <tr>
-            <td>
-                <table class="table-bordered">
-                    <tr><td><br /></td></tr>
-                    <tr><td align="center">Morning</td></tr>
-                    <tr><td align="center">Afternoon</td></tr>
-                    <tr><td align="center">Evening</td></tr>
-                    <tr><td align="center">Night</td></tr>
-                    <tr><td align="center">Pressure</td></tr>
-                    <tr><td align="center"> <br /><br /><br /></td></tr>
-
-                </table>
-            </td>
+            
                 @foreach (var d in Model.GetDailyList())
                 {
                     <td>
                     <table class="table-bordered">
                         
-                           <tr><td align="center" bgcolor="#26F4BA"> @d.Date </td></tr>
-                           <tr><td align="center" bgcolor="#A6FCFE"> @d.MorningTemp °C </td></tr>
-                           <tr><td align="center" bgcolor="#7CFCFE"> @d.DayTemp °C </td></tr>
-                           <tr><td align="center" bgcolor="#2DFCFF"> @d.EveningTemp °C </td></tr>
-                           <tr><td align="center" bgcolor="#4FE4FA"> @d.NightTemp °C </td></tr>
-                           <tr><td align="center" bgcolor="#45C0FD"> @d.Pressure hPa </td></tr>
-                           <tr><td bgcolor="#E0FFFF"><img src="@d.Icon" height="60" width="60"></td></tr>
+                           <tr><th align="center" bgcolor="#04E4C3" colspan="3"><strong> @d.Date </strong></th></tr>
+                           <tr><td align="center" bgcolor="#A6FCFE"> Min <br />  @d.MinTemp °C </td>
+                               <td align="center" bgcolor="#7CFCFE" style="color:#1135A0"><strong> Day <br /> @d.DayTemp °C </strong></td>
+                               <td align="center" bgcolor="#2DFCFF"> Max <br /> @d.MaxTemp °C </td>
+                           </tr>
+                           <tr><td bgcolor="#E0FFFF" align="center" colspan="3"><img src="@d.Icon" height="60" width="60"></td></tr>
+                           <tr><td align="center" bgcolor="#4FE4FA" colspan="3"> Pressure: @d.Pressure hPa </td></tr>
 
                         </table>
                         </td>
