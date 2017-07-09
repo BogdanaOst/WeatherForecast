@@ -12,6 +12,7 @@ namespace WebWeather.Controllers
     {
 
         IForecastService service;
+        static Forecast forecast;
 
         public WeatherController(IForecastService iservice)
         {
@@ -30,17 +31,15 @@ namespace WebWeather.Controllers
         {
             if (!string.IsNullOrWhiteSpace(parametrs.CityName))
             {
-                
-                Forecast forecast = service.GetForecast(parametrs);
-                return View(forecast);
+                forecast = service.GetForecast(parametrs);
             }
-            else
-                return View();
+            else if(forecast!=null) forecast = service.GetForecast(new Parametrs() { CityName = forecast.City, NumOfDays = parametrs.NumOfDays });
+                return View(forecast);
         }
         public ActionResult OtherCity()
         {
            
-            return View();
+            return View(forecast);
         }
     }
 }
