@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using AutoMapper;
+using BLL.Managers;
+using DAL.DTOs;
 using System.Web.Mvc;
 using WebWeather.Models;
 using WebWeather.Services;
@@ -11,12 +10,15 @@ namespace WebWeather.Controllers
     public class WeatherController : Controller
     {
 
-        IForecastService service;
+        IForecastService forecastService;
+        IHistoryManager historyManager;
+
         static Forecast forecast;
 
-        public WeatherController(IForecastService iservice)
+        public WeatherController(IForecastService iservice, IHistoryManager ihistoryManager)
         {
-            service = iservice;
+            forecastService = iservice;
+            historyManager = ihistoryManager;
         }
 
         // GET: Weather
@@ -31,10 +33,26 @@ namespace WebWeather.Controllers
         {
             if (!string.IsNullOrWhiteSpace(parametrs.CityName))
             {
-                forecast = service.GetForecast(parametrs);
+                forecast = forecastService.GetForecast(parametrs);
             }
-            else if(forecast!=null) forecast = service.GetForecast(new Parametrs() { CityName = forecast.City, NumOfDays = parametrs.NumOfDays });
-                return View(forecast);
+            else if (forecast != null)
+            
+                forecast = forecastService.GetForecast(new Parametrs() { CityName = forecast.City, NumOfDays = parametrs.NumOfDays });
+
+                HistoryViewModel model = new HistoryViewModel()
+                {
+                    City = forecast.City,
+                    NumOfDaysRequested = parametrs.NumOfDays,
+                    Date = forecast.GetDailyList()[0].Date,
+                    DayTemp = forecast.GetDailyList()[0].DayTemp,
+                    Icon = forecast.GetDailyList()[0].Icon
+                };
+
+                Mapper.Initialize(cfg => cfg.CreateMap<HistoryViewModel, HistoryDTO>());
+                var historyDto = Mapper.Map<HistoryViewModel, HistoryDTO>(model);
+                historyManager.Add(historyDto);
+            
+            return View(forecast);
         }
         public ActionResult OtherCity()
         {

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebWeather.Models.SelectedCityViewModel>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Add New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.Name|
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id}) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

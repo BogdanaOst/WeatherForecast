@@ -11,6 +11,8 @@ namespace WebWeather.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using System.Web.Mvc;
+    using Ninject.Modules;
+    using BLL.Infrastructure;
 
     public static class NinjectWebCommon
     {
@@ -30,7 +32,8 @@ namespace WebWeather.App_Start
 
         private static IKernel CreateKernel()
         {
-            var kernel = new StandardKernel();
+            var modules = new INinjectModule[] { new ServiceModule("DefaultConnection") };
+            var kernel = new StandardKernel(modules);
             try
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);

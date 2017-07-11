@@ -1,4 +1,5 @@
-﻿using Ninject;
+﻿using BLL.Managers;
+using Ninject;
 using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
@@ -25,6 +26,8 @@ namespace WebWeather.Resolver
         private void AddBindings()
         {
             kernel.Bind<IForecastService>().To<ForecastService>();
+            kernel.Bind<IHistoryManager>().To<HistoryManager>();
+            kernel.Bind<ISelectedCityManager>().To<SelectedCityManager>();
         }
     }
 }
