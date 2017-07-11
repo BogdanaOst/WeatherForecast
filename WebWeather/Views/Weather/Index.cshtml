@@ -13,20 +13,24 @@
 </head>
 
 <body align="center">
-    @Html.ActionLink("View Search History","Index","History")
+   <p align="center"> @Html.ActionLink("View Search History","Index","History") &emsp; @Html.ActionLink("Your selected cities", "Index", "SelectedCities")</p>
     <br />
 
         @using (Html.BeginForm("Index", "Weather", FormMethod.Post))
         {
-
-    <p>
-    @Html.RadioButton("CityName", "Dnipropetrovsk") Dnipro&emsp;&emsp;
-    @Html.RadioButton("CityName", "Kharkiv") Kharkiv&emsp;&emsp;
-    @Html.RadioButton("CityName", "Kiev") Kiev&emsp;&emsp;
-    @Html.RadioButton("CityName", "Lviv") Lviv&emsp;&emsp;
-    @Html.RadioButton("CityName", "Odessa") Odessa</p>
-    @Html.ActionLink("Other City","OtherCity")
-    <br />
+             
+            var cityList = new List<SelectListItem>();
+            if (ViewBag.Cities != null)
+            {
+                foreach (WebWeather.Models.SelectedCityViewModel c in ViewBag.Cities)
+                {
+                    cityList.Add(new SelectListItem() { Text = c.Name, Value = c.Name });
+                }
+            }
+            <p>Selected: @Html.DropDownList("CityName", cityList, new { @class = "btn btn-default dropdown-toggle" })</p>
+        
+     
+    @Html.ActionLink("Other city", "OtherCity")
     <br />
         <p>
             You want a forecast for

@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width" />
 </head>
 <body>
-    <p>
+    <p align="center">
         @Html.ActionLink("Add New", "Create")
     </p>
-    <table class="table">
+    <table  align="center">
         <tr>
             <th></th>
         </tr>
@@ -18,13 +18,16 @@
     @foreach (var item in Model) {
         <tr>
             <td>
-                @item.Name|
-                @Html.ActionLink("Edit", "Edit", new { id=item.Id}) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+               @item.Name &emsp;
+            </td>
+            <td>
+                    <a href="~/SelectedCities/Edit/@item.Id"> <span class="glyphicon glyphicon-pencil"></span></a>
+                    <a href="~/SelectedCities/Delete/@item.Id"> <span class="glyphicon glyphicon-trash"></span></a>
             </td>
         </tr>
     }
     
     </table>
+    @Html.ActionLink("Back to weather","Index","Weather")
 </body>
 </html>
