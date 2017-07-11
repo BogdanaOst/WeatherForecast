@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebWeather.Models.SelectedCityViewModel>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <p align="center">
+        @Html.ActionLink("Add New", "Create")
+    </p>
+    <table  align="center">
+        <tr>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+               @item.Name &emsp;
+            </td>
+            <td>
+                    <a href="~/SelectedCities/Edit/@item.Id"> <span class="glyphicon glyphicon-pencil"></span></a>
+                    <a href="~/SelectedCities/Delete/@item.Id"> <span class="glyphicon glyphicon-trash"></span></a>
+            </td>
+        </tr>
+    }
+    
+    </table>
+    @Html.ActionLink("Back to weather","Index","Weather")
+</body>
+</html>
