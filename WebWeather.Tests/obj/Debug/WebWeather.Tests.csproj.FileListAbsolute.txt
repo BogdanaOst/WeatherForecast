@@ -55,3 +55,6 @@ C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\ru\System.
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\ru\System.Web.WebPages.resources.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\ru\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\WebWeather.Tests.dll.config
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\FakeItEasy.dll
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\FakeItEasy.pdb
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\FakeItEasy.xml
