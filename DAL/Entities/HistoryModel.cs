@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Entities
 {
-    public class HistoryModel
+    public class HistoryModel:IEntity
     {
         public int Id { get; set; }
         public string Date { get; set; }

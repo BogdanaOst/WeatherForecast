@@ -8,16 +8,10 @@ namespace WebWeather.Controllers
 {
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
             return RedirectToAction("Index", "Weather");
-        }
-
-        public ActionResult About()
-        {
-            return View();
-        }
-
-       
+        }     
     }
 }
