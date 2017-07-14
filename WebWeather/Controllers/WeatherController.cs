@@ -16,7 +16,7 @@ namespace WebWeather.Controllers
         IHistoryManager historyManager;
         ISelectedCityManager cityManager;
         List<SelectedCityViewModel> selectedCitiesList;
-        static Forecast forecast;
+        public static Forecast forecast { get; private set; }
 
         public WeatherController(IForecastService iservice, IHistoryManager ihistoryManager, ISelectedCityManager icityManager)
         {

@@ -41,5 +41,34 @@ namespace WebWeather.Tests.IntegrationTests
             controller.Create(new Models.SelectedCityViewModel() { Id = 1, Name = "" });
             Assert.That(citiesRepository.GetAll().Count == 0);
         }
+        [Test]
+        public void Delete_When_IdIsNull_Then_Nothing()
+        {
+            var citiesRepository = A.Fake<IRepository<SelectedCity>>();
+            A.CallTo(() => citiesRepository.GetAll()).Returns(new List<SelectedCity>());
+            var unitOfWork = A.Fake<IUnitOfWork>();
+            A.CallTo(() => unitOfWork.SelectedCities).Returns(citiesRepository);
+            var service = new SelectedCityManager(unitOfWork);
+            service.Delete(0);
+            Assert.Pass();
+        }
+
+       [Test]
+       public void Create_Works()
+        {
+            var city = new SelectedCity()
+            {
+                Id = 1,
+                Name = "SomeName"
+            };
+
+            var citiesRepository = A.Fake<IRepository<SelectedCity>>();
+            A.CallTo(() => citiesRepository.GetAll()).Returns(new List<SelectedCity>() { city });
+            var unitOfWork = A.Fake<IUnitOfWork>();
+            A.CallTo(() => unitOfWork.SelectedCities).Returns(citiesRepository);
+            var service = new SelectedCityManager(unitOfWork);
+            service.Add(new DAL.DTOs.SelectedCityDTO() { Id = city.Id, Name = city.Name });
+            Assert.AreEqual(citiesRepository.GetAll().Count, 1);
+        }
     }
 }

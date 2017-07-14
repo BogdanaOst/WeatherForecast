@@ -16,7 +16,8 @@ namespace WebWeather.Services
         public Forecast GetForecast(Parametrs parametrs)
         {
             var appSettings = ConfigurationManager.AppSettings;
-            string path = appSettings["BaseUrl"] + "q=" + parametrs.CityName + "&units=metric&cnt=" +parametrs.NumOfDays+"&APPID="+appSettings["ApiKey"];
+            string path = appSettings["BaseUrl"] + "q=" + parametrs.CityName + "&units=metric&cnt=" +
+                parametrs.NumOfDays+"&APPID="+appSettings["ApiKey"];
             WebClient client = new WebClient();
             try
             {
