@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebWeather.Tests.IntegrationTests
+namespace WebWeather.Tests.ManagersTests
 {
     [TestFixture]
     public class HistoryTests

@@ -58,3 +58,5 @@ C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\WebWeather
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\FakeItEasy.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\FakeItEasy.pdb
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\FakeItEasy.xml
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\EntityFramework.SqlServer.xml

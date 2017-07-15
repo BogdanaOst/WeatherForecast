@@ -7,7 +7,7 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using WebWeather.Controllers;
 
-namespace WebWeather.Tests.IntegrationTests
+namespace WebWeather.Tests.ManagersTests
 {
     public class SelectedCityTests
     {
