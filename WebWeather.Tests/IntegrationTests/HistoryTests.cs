@@ -18,11 +18,13 @@ namespace WebWeather.Tests.IntegrationTests
         [Test]
         public void GetAll_When_NoInit_Then_EmptyListButNotNull()
         {
+            //Arrange
             var historyRepository = A.Fake<IRepository<HistoryModel>>();
             var unitOfWork = A.Fake<IUnitOfWork>();
             A.CallTo(() => unitOfWork.History).Returns(historyRepository);
-
+            //Act
             var historyService = new HistoryManager(unitOfWork);
+            //Assert
             Assert.NotNull(historyService.GetAll());
             Assert.IsEmpty(historyService.GetAll());
         }
