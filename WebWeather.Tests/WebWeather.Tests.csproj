@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IntegrationTests\HistoryTests.cs" />
     <Compile Include="IntegrationTests\SelectedCityTests.cs" />
     <Compile Include="PL.Tests\ForecastService.Tests.cs" />
     <Compile Include="PL.Tests\HistoryControllerTests.cs" />

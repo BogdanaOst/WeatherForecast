@@ -53,8 +53,8 @@ namespace WebWeather.Tests.IntegrationTests
             Assert.Pass();
         }
 
-       [Test]
-       public void Create_Works()
+        [Test]
+        public void Create_Works()
         {
             var city = new SelectedCity()
             {
