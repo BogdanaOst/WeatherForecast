@@ -60,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbTests\IntegrationDbHistory.cs" />
+    <Compile Include="DbTests\IntegrationDbSelectedCitiesTests.cs" />
     <Compile Include="ManagersTests\HistoryTests.cs" />
     <Compile Include="ManagersTests\SelectedCityTests.cs" />
     <Compile Include="PLTests\ForecastService.Tests.cs" />

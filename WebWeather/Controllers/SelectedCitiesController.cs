@@ -35,7 +35,7 @@ namespace WebWeather.Controllers
         [HttpPost]
         public ActionResult Create(SelectedCityViewModel model)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && !string.IsNullOrWhiteSpace(model.Name))
             {
                 SelectedCityDTO cityDto = new SelectedCityDTO()
                 {
