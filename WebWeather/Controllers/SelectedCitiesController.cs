@@ -1,11 +1,8 @@
 ﻿using AutoMapper;
 using BLL.Managers;
 using DAL.DTOs;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using WebWeather.Models;
 
