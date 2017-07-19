@@ -72,11 +72,12 @@ namespace WebWeather.Models
     }
     public class Forecast
     {
-        List<DayForecast> forecast=new List<DayForecast>();
+        public List<DayForecast> forecast { get; private set; }
         public string City { get; private set; }
 
         public Forecast(RootObject obj)
         {
+            forecast = new List<DayForecast>();
             City = obj.City.Name;
             int i = 0;
             foreach(var d in obj.List)

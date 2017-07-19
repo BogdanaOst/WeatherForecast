@@ -114,3 +114,9 @@ C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\BLL.pdb
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\AutoMapper.xml
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\DAL.pdb
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\EntityFramework.xml
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\System.Net.Http.Formatting.dll
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\System.Web.Http.dll
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\System.Web.Http.WebHost.dll
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\System.Net.Http.Formatting.xml
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\System.Web.Http.xml
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\System.Web.Http.WebHost.xml
