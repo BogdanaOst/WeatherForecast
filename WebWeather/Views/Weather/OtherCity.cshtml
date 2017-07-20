@@ -8,7 +8,6 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="~/Content/StyleSheet.css">
 </head>
 
 <body align="center">
@@ -23,7 +22,7 @@
       new SelectListItem{ Text = "For 3 Days", Value = "3"},
       new SelectListItem{ Text = "For a week", Value = "7"}},new { @class = "btn btn-default dropdown-toggle" })</p>
 
-     <button type="submit">Get!</button>
+     <button type="submit" class="button1">Get!</button>
     }
 
     @Html.Partial("Result", Model)

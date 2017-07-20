@@ -7,15 +7,10 @@
 
 <html>
 <head>
-    <link rel="stylesheet" href="~/Content/StyleSheet.css">
     <meta name="viewport" content="width=device-width" />
-    
 </head>
 
 <body align="center">
-   <p align="center"> @Html.ActionLink("View Search History","Index","History") &emsp; @Html.ActionLink("Your selected cities", "Index", "SelectedCities")</p>
-    <br />
-
         @using (Html.BeginForm("Index", "Weather", FormMethod.Post))
         {
              
@@ -30,18 +25,18 @@
             <p>Selected: @Html.DropDownList("CityName", cityList, new { @class = "btn btn-default dropdown-toggle" })</p>
         
      
-    @Html.ActionLink("Other city", "OtherCity")
-    <br />
-        <p>
-            You want a forecast for
-            @Html.DropDownList("NumOfDays", new List<SelectListItem>
+            @Html.ActionLink("Other city", "OtherCity",null,new {@class="blueLink" })
+                <br />
+                <p>
+                    You want a forecast for
+                    @Html.DropDownList("NumOfDays", new List<SelectListItem>
       { new SelectListItem{ Text = "Today", Value = "1"},
       new SelectListItem{ Text = "3 Days", Value = "3"},
       new SelectListItem{ Text = "A Week", Value = "7"}}, new { @class = "btn btn-default dropdown-toggle" })
-        </p>
+                </p>
 
-        <button type="submit" >Get!</button>
-        }
-    @Html.Partial("Result", Model)
+                <button type="submit" class="button1">Get!</button>
+                }
+                @Html.Partial("Result", Model)
 </body>
 </html>

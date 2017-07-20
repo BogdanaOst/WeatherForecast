@@ -1,30 +1,46 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+@*<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">*@
+    <link rel="stylesheet" href="~/Content/StyleSheet.css">
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <style>
-        body {
-            background: url("http://www.paper4conference.com/webhistory/www.eenet2013.org/images/vintage_paper_backgrounds%20%288%29.jpg");
-        }
-    </style>
-    
 </head>
 
-<body>
-
+<body class="main_style">
+    <header class="menubar_container">
+        <div class="main_menuitem">
+          <a href='@Url.Action("Index", "Home")'class="blueLink">
+            <img src="~/Content/logo.png"height="65" width="65" />
+            Get Weather!
+          </a>
+        </div>
+        <div class="menuitems_container">
+            <div class="menuitem">@Html.ActionLink("Search History", "Index", "History", null,new { @class = "blueLink" })</div>
+            <div class="menuitem">@Html.ActionLink("Selected Cities", "Index", "SelectedCities", null, new { @class = "blueLink" })</div>
+        </div>
+    </header>
     <div class="container body-content">
         @RenderBody()
         <hr />
       
     </div>
-
+    <footer class="footer">
+        <div class="footer_elem">
+            <p>&copy; GetWeather! - </p>
+            <p>Anytime and anywhere. </p>
+        </div>
+        <div class="footer_elem">
+            <p>Kharkiv, Ukraine</p>
+            <p>+38050-123-45-67</p>
+        </div>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
 </body>
 </html>

@@ -8,3 +8,13 @@ C:\Users\Dana\Source\Repos\WeatherForecast\DAL\bin\Debug\EntityFramework.SqlServ
 C:\Users\Dana\Source\Repos\WeatherForecast\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Dana\Source\Repos\WeatherForecast\DAL\obj\Debug\DAL.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\DAL\obj\Debug\DAL.pdb
+C:\Users\Dana\Desktop\WeatherForecast\DAL\bin\Debug\DAL.dll.config
+C:\Users\Dana\Desktop\WeatherForecast\DAL\bin\Debug\DAL.dll
+C:\Users\Dana\Desktop\WeatherForecast\DAL\bin\Debug\DAL.pdb
+C:\Users\Dana\Desktop\WeatherForecast\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Dana\Desktop\WeatherForecast\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dana\Desktop\WeatherForecast\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Dana\Desktop\WeatherForecast\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dana\Desktop\WeatherForecast\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Dana\Desktop\WeatherForecast\DAL\obj\Debug\DAL.dll
+C:\Users\Dana\Desktop\WeatherForecast\DAL\obj\Debug\DAL.pdb

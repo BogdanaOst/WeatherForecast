@@ -1,11 +1,17 @@
-﻿body
+﻿.main_style
 {
 	font-family: helvetica, sans-serif;
 	font-size: small;
     font-variant: small-caps;
+    background-image: url(sky_blue_abstract.jpg);
+    background-repeat:no-repeat;
+}
+.blueTable
+{
+    background-color:#4bb9ff;
 }
 
-button {
+.button1 {
   display: inline-block;
   width: 60px;
   height: 30px;
@@ -19,11 +25,11 @@ button {
   box-shadow: inset rgba(0,0,0,.6) 0 -2px 5px, inset rgba(252,255,255,.7) 0 2px 5px, rgba(0,0,0,.8) 0 2px 5px -1px;
   user-select: none;
 } 
-button:hover {
+.button1:hover {
   color: rgb(0,59,66);
   cursor: pointer;
 }
-button:active {
+.button1:active {
   padding-bottom: 1px;
   box-shadow:
    inset rgba(0,0,0,1) 0 1px 3px,
@@ -40,16 +46,49 @@ font-variant: small-caps;
 word-spacing: 1.4pt;
 
 }
+.menubar_container
+{
+  display: flex;
+  justify-content: space-between;
+  background-color:#00AAE3;
+  font-size: 18px;
+  height: 75px;
+  align-items: center;
+  margin-top:-50px;
+  margin-bottom:20px;
+}
+.menuitems_container
+{
+  display: flex;
+  justify-content: flex-end;
+}
+.main_menuitem
+{
+    padding:15px;
+    font-size:25px;
+}
+.menuitem
+{
+  padding:15px;
+  font-size: 18px;
+}
+.footer
+{
+  display: flex;
+  justify-content: space-around;
+}
+.footer_elem
+{
+    color:white;
+    align-content:stretch;
+}
+.blueLink
+{
+  color: rgb(0,59,66);
+}
 
-a:link	{
-	text-decoration: none;
-	color: #6699CC; }
-a:visited	{
-	text-decoration: none;
-	color: #336699; }
-a:active	{
+.blueLink:hover	
+{
 	text-decoration: underline;
-	color: #ff0000; }
-a:hover	{
-	text-decoration: underline;
-	color: #ff0000; }
+	color: #000000; 
+}
