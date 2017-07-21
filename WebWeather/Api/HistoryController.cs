@@ -22,11 +22,7 @@ namespace WebWeather.Api
             this.service = service;
         }
 
-        public HistoryController()
-        {
-            service = new HistoryManager(new UnitOfWork("DefaultConnection"));
-        }
-
+       
         //GET api/History/
         [HttpGet]
         public List<HistoryViewModel> GetAll()

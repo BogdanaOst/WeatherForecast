@@ -13,6 +13,7 @@ namespace WebWeather.App_Start
     using System.Web.Mvc;
     using Ninject.Modules;
     using BLL.Infrastructure;
+    using System.Web.Http;
 
     public static class NinjectWebCommon
     {
@@ -51,6 +52,7 @@ namespace WebWeather.App_Start
 
         private static void RegisterServices(IKernel kernel)
         {
+            GlobalConfiguration.Configuration.DependencyResolver= new Ninject.WebApi.DependencyResolver.NinjectDependencyResolver(kernel);
             DependencyResolver.SetResolver(new WebWeather.Resolver.NinjectDependencyResolver(kernel));
         }
     }

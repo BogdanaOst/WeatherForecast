@@ -188,3 +188,4 @@ C:\Users\Dana\Desktop\WeatherForecast\WebWeather\bin\ru\System.Web.WebPages.Razo
 C:\Users\Dana\Desktop\WeatherForecast\WebWeather\obj\Debug\WebWeather.csprojResolveAssemblyReference.cache
 C:\Users\Dana\Desktop\WeatherForecast\WebWeather\obj\Debug\WebWeather.dll
 C:\Users\Dana\Desktop\WeatherForecast\WebWeather\obj\Debug\WebWeather.pdb
+C:\Users\Dana\Desktop\WeatherForecast\WebWeather\bin\Ninject.WebApi.DependencyResolver.dll

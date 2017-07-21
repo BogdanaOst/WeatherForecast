@@ -2,8 +2,6 @@
 using BLL.Managers;
 using DAL.DTOs;
 using DAL.UnitOfWork;
-using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -15,12 +13,8 @@ namespace WebWeather.Api
 {
     public class CitiesController : ApiController
     {
-        ISelectedCityManager manager;
-        public CitiesController()
-        {
-            manager = new SelectedCityManager(new UnitOfWork("DefaultConnection"));
-        }
-
+       private ISelectedCityManager manager;
+     
         public CitiesController(ISelectedCityManager imanager)
         {
             manager = imanager;

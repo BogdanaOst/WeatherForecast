@@ -15,6 +15,10 @@ namespace DAL.UnitOfWork
         private HistoryRepository historyRepository;
         private SelectedCitiesRepository selectedCitiesRepository;
        
+        public UnitOfWork()
+        {
+            db = new AppContext("DefaultConnection");
+        }
         public UnitOfWork(string connectionString)
         {
             db = new AppContext(connectionString);
