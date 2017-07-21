@@ -1,14 +1,15 @@
 ﻿.main_style
 {
 	font-family: helvetica, sans-serif;
-	font-size: small;
+	font-size: 18px;
     font-variant: small-caps;
-    background-image: url(sky_blue_abstract.jpg);
-    background-repeat:no-repeat;
+    background-image: url("http://beloweb.ru/wp-content/uploads/2014/10/Blurred-Background_5-800x461.jpg");
+    background-size:100%;
+    background-repeat:repeat;
 }
 .blueTable
 {
-    background-color:#4bb9ff;
+    background-color:#6bfbf5;
 }
 
 .button1 {
@@ -51,7 +52,7 @@ word-spacing: 1.4pt;
   display: flex;
   justify-content: space-between;
   background-color:#00AAE3;
-  font-size: 18px;
+  font-size: 20px;
   height: 75px;
   align-items: center;
   margin-top:-50px;
@@ -72,8 +73,13 @@ word-spacing: 1.4pt;
   padding:15px;
   font-size: 18px;
 }
+.menuitem::before
+{
+    content:"*";
+}
 .footer
 {
+  font-size:13px;
   display: flex;
   justify-content: space-around;
 }

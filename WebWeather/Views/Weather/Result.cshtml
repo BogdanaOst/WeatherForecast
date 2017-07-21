@@ -1,19 +1,20 @@
 ﻿@model WebWeather.Models.Forecast
 <style>
     th {
-        font-family: Monotype Corsiva;
+        font-family: Monotype;
         font-size: 20px;
         text-align:center;
+        font-style: normal;
     }
     td{
-        font-size: 13px;
+        font-size: 15px;
     }
 </style>
 <body>
     @if (Model != null)
     {
         <br />
-        <h4><strong> It's weather in @Model.City: </strong></h4>
+        <h4><strong> Weather in @Model.City: </strong></h4>
         <br />
         <table align="center">
          <tr>
