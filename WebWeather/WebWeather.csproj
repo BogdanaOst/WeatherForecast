@@ -178,9 +178,9 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\logo.png" />
-    <Content Include="Content\sky_blue_abstract.jpg" />
-    <Content Include="Content\StyleSheet.css" />
+    <Content Include="Content\CustomStyles\logo.png" />
+    <Content Include="Content\CustomStyles\sky_blue_abstract.jpg" />
+    <Content Include="Content\CustomStyles\StyleSheet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

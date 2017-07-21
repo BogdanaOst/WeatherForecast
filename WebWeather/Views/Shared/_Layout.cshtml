@@ -4,23 +4,24 @@
 @*<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />*@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/Content/StyleSheet.css">
+    <link rel="stylesheet" href="~/Content/CustomStyles/StyleSheet.css">
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 
-<body class="main_style">
+<body class="content_style">
     <header class="menubar_container">
         <div class="main_menuitem">
-          <a href='@Url.Action("Index", "Home")'class="blueLink">
-            <img src="~/Content/logo.png"height="65" width="65" />
+          <a href='@Url.Action("Index", "Home")' class="link">
+            <img src="~/Content/CustomStyles/logo.png" height="65" width="65" />
             Get Weather!
           </a>
         </div>
         <div class="menuitems_container">
-            <div class="menuitem">@Html.ActionLink("Search History", "Index", "History", null,new { @class = "blueLink" })</div>
-            <div class="menuitem">@Html.ActionLink("Selected Cities", "Index", "SelectedCities", null, new { @class = "blueLink" })</div>
+            <div class="menuitem">@Html.ActionLink("Home","Index","Home",null, new { @class = "link" })</div>
+            <div class="menuitem">@Html.ActionLink("Search History", "Index", "History", null,new { @class = "link" })</div>
+            <div class="menuitem">@Html.ActionLink("Selected Cities", "Index", "SelectedCities", null, new { @class = "link" })</div>
         </div>
     </header>
     <div class="container body-content">
