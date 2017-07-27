@@ -189,3 +189,4 @@ C:\Users\Dana\Desktop\WeatherForecast\WebWeather\obj\Debug\WebWeather.csprojReso
 C:\Users\Dana\Desktop\WeatherForecast\WebWeather\obj\Debug\WebWeather.dll
 C:\Users\Dana\Desktop\WeatherForecast\WebWeather\obj\Debug\WebWeather.pdb
 C:\Users\Dana\Desktop\WeatherForecast\WebWeather\bin\Ninject.WebApi.DependencyResolver.dll
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\Ninject.WebApi.DependencyResolver.dll

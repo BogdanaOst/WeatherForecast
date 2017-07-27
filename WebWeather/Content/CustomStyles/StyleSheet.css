@@ -2,20 +2,25 @@
     font-family: helvetica, sans-serif;
     font-size: 18px;
     font-variant: small-caps;
-    background-color:#1fc9fb;
+    background-image:url("http://img0.liveinternet.ru/images/attach/b/3//41/244/41244721_1237472638_golubuye4.jpg");
     background-size: 100%;
     background-repeat: repeat;
+    min-height: 100vh;
 } 
 .menubar_container
 {
   display: flex;
   justify-content: space-between;
-  background-color:#00AAE3;
+  background-color:rgba(15, 190, 240, 0.84);
   font-size: 20px;
   height: 75px;
   align-items: center;
   margin-top:-50px;
   margin-bottom:20px;
+}
+main{
+	margin:20px;
+	flex: 1 0 auto;
 }
 .menuitems_container
 {
@@ -44,7 +49,7 @@
 }
 .footer_elem
 {
-    color:white;
+    color:#040068;
     align-content:stretch;
 }
 
@@ -84,3 +89,6 @@
     color:blue;
     text-decoration:underline;
 }
+.input_container
+{display: flex;}
+.input_item{}

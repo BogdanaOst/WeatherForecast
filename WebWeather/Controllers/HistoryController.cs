@@ -3,6 +3,7 @@ using BLL.Managers;
 using DAL.DTOs;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using WebWeather.Models;
 
@@ -22,7 +23,8 @@ namespace WebWeather.Controllers
             List<HistoryDTO> historyDtos = service.GetAll();
             Mapper.Initialize(cfg => cfg.CreateMap<HistoryDTO, HistoryViewModel>());
             var history = Mapper.Map<List<HistoryDTO>, List<HistoryViewModel>>(historyDtos);
-            return View(history);
+            history.Reverse();
+            return View(history.GetRange(0,Math.Min(10,history.Count)));
         }
     }
 }
