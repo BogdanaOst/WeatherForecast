@@ -64,7 +64,6 @@ C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\roslyn\System.Reflecti
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\roslyn\vbc.exe
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\roslyn\VBCSCompiler.exe
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\WebWeather.dll.config
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\WebWeather.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\WebWeather.pdb
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\Antlr3.Runtime.dll
@@ -190,3 +189,5 @@ C:\Users\Dana\Desktop\WeatherForecast\WebWeather\obj\Debug\WebWeather.dll
 C:\Users\Dana\Desktop\WeatherForecast\WebWeather\obj\Debug\WebWeather.pdb
 C:\Users\Dana\Desktop\WeatherForecast\WebWeather\bin\Ninject.WebApi.DependencyResolver.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\Ninject.WebApi.DependencyResolver.dll
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\BLL.dll.config
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\DAL.dll.config

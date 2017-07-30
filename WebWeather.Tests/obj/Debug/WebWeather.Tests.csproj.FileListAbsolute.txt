@@ -25,7 +25,6 @@ C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\BLL.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\AutoMapper.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\Ninject.Web.Common.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\Ninject.Web.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\System.Web.Razor.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\System.Web.WebPages.Razor.dll
@@ -41,7 +40,6 @@ C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\BLL.pdb
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\AutoMapper.xml
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\Ninject.Web.Common.xml
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\Ninject.Web.xml
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\System.Web.Razor.xml
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\System.Web.WebPages.xml
@@ -60,3 +58,12 @@ C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\FakeItEasy
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\FakeItEasy.xml
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\System.Web.Http.dll
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\Ninject.WebApi.DependencyResolver.dll
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\BLL.dll.config
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\DAL.dll.config
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\System.Web.Http.xml
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather.Tests\bin\Debug\System.Net.Http.Formatting.xml
