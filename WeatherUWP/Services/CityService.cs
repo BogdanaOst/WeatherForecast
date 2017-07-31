@@ -20,5 +20,17 @@ namespace WeatherUWP.Services
             return JsonConvert.DeserializeObject<IEnumerable<CityModel>>(result);
 
         }
+        public async void Add(string name)
+        {
+            var path = "http://localhost:59721/api/Cities/?name="+name;
+            var client = new HttpClient();
+            await client.PostAsync(path,null);
+        }
+        public async void Delete(string name)
+        {
+            var path = "http://localhost:59721/api/Cities/?name=" + name;
+            var client = new HttpClient();
+            await client.DeleteAsync(path);
+        }
     }
 }

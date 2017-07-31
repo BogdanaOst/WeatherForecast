@@ -28,5 +28,20 @@ namespace WeatherUWP
             this.InitializeComponent();
             Frame.Navigate(typeof(WeatherView));
         }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(WeatherView));
+        }
+
+        private void Cities_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CitiesView));
+        }
+
+        private void History_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(HistoryView));
+        }
     }
 }

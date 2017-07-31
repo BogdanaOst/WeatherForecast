@@ -1,3 +1,5 @@
 App.xbf
+Views\CitiesView.xbf
+Views\HistoryView.xbf
 Views\MainPage.xbf
 Views\WeatherView.xbf

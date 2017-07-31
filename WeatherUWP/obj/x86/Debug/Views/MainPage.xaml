@@ -8,7 +8,16 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.501,0.479">
+       
         <Frame x:ConnectionId='1' Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" x:Name="Frame"/>
+        <CommandBar>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton x:ConnectionId='2' Icon="Home" Label="Weather"                   />
+            <AppBarButton x:ConnectionId='3' Icon="Clock" Label="History"                      />
+            <AppBarButton x:ConnectionId='4' Icon="Bookmarks" Label="Selected Cities"                     />
+        </CommandBar>
     </Grid>
 </Page>
 

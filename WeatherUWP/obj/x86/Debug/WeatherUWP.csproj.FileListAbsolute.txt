@@ -238,3 +238,14 @@ C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\resources.en
 C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\resources.en-us.resfiles.intermediate
 C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\GalaSoft.MvvmLight.Platform.pri.xml
 C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\WeatherUWP.csprojResolveAssemblyReference.cache
+C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\bin\x86\Debug\Views\CitiesView.xbf
+C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\bin\x86\Debug\Views\HistoryView.xbf
+C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\Views\CitiesView.g.i.cs
+C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\Views\CitiesView.g.cs
+C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\Views\HistoryView.g.i.cs
+C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\Views\HistoryView.g.cs
+C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\Views\CitiesView.xaml
+C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\Views\HistoryView.xaml
+C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\Views\CitiesView.xbf
+C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\Views\HistoryView.xbf

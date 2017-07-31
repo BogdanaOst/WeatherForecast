@@ -255,7 +255,7 @@ namespace WeatherUWP.WeatherUWP_XamlTypeInfo
                 break;
 
             case 6:   //  WeatherUWP.ViewModels.CitiesViewModel
-                userType = new global::WeatherUWP.WeatherUWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                userType = new global::WeatherUWP.WeatherUWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
