@@ -2,6 +2,7 @@
 using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 using WeatherUWP.Models;
@@ -11,14 +12,20 @@ namespace WeatherUWP.ViewModels
 {
     public class CitiesViewModel: ViewModelBase
     {
-        public List<CityModel> Cities { get; private set; }
+        public ObservableCollection<CityModel> Cities { get; private set; }
         CityService service = new CityService();
         public ICommand AddCommand { get; set; }
         public string nameToAdd { get; set; }
         public CitiesViewModel()
         {
-            Cities =  service.GetSelected().ToList();
+            var list=service.GetSelected();
+            Cities = new ObservableCollection<CityModel>();
+            foreach(var x in list)
+            {
+                Cities.Add(x);
+            }
             AddCommand = new RelayCommand(AddCity);
+           
         }
 
         void AddCity()

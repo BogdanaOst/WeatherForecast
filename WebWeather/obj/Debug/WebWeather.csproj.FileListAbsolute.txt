@@ -191,3 +191,6 @@ C:\Users\Dana\Desktop\WeatherForecast\WebWeather\bin\Ninject.WebApi.DependencyRe
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\Ninject.WebApi.DependencyResolver.dll
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\BLL.dll.config
 C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\DAL.dll.config
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\System.Web.Cors.dll
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\System.Web.Http.Cors.dll
+C:\Users\Dana\Source\Repos\WeatherForecast\WebWeather\bin\System.Web.Http.Cors.xml

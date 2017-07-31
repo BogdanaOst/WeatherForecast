@@ -27,6 +27,7 @@ namespace WeatherUWP
         {
             this.InitializeComponent();
             Frame.Navigate(typeof(WeatherView));
+           
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)

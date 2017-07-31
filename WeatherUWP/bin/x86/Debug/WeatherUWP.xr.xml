@@ -74,6 +74,8 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Command" />
       <RootProperty Name="Tag" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Padding" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootEvent Name="Click" />

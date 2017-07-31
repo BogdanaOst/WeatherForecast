@@ -37,6 +37,7 @@ namespace WeatherUWP.ViewModels
                 foreach (var item in cityList)
                     Cities.Add(item.Name);
             }
+            
         }
 
         public async void GetWeather()
