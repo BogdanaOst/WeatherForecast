@@ -75,7 +75,6 @@
       <RootProperty Name="Command" />
       <RootProperty Name="Tag" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="Padding" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootEvent Name="Click" />
@@ -105,12 +104,12 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Padding" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
