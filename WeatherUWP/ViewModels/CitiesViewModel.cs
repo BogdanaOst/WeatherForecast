@@ -15,32 +15,52 @@ namespace WeatherUWP.ViewModels
         public ObservableCollection<CityModel> Cities { get; private set; }
         CityService service = new CityService();
         public ICommand AddCommand { get; set; }
+        public ICommand DeleteCommand { get; set; }
         public string nameToAdd { get; set; }
+        public string nameToDelete { get; set; }
         public CitiesViewModel()
         {
-            var list=service.GetSelected();
+
             Cities = new ObservableCollection<CityModel>();
-            foreach(var x in list)
+            Update();
+            AddCommand = new RelayCommand(AddCity);
+            DeleteCommand = new RelayCommand(DeleteCity);
+        }
+
+        void Update()
+        {
+            Cities.Clear();
+            var list = service.GetSelected();
+            foreach (var x in list)
             {
                 Cities.Add(x);
             }
-            AddCommand = new RelayCommand(AddCity);
-           
         }
-
         void AddCity()
         {
             try
             {
                 service.Add(nameToAdd);
-                RaisePropertyChanged(() => Cities);
+                Update();
             }
             catch(Exception ex)
             {
 
             }
         }
-        
 
+        void DeleteCity()
+        {
+            try
+            {
+                
+                service.Delete(nameToDelete);
+                Update();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }

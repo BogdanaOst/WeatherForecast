@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-31T14:20:47.540</Modified>
+      <Modified>2017-07-31T15:04:22.505</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\bin\x86\Debug\WeatherUWP.exe">
       <PackagePath>entrypoint\WeatherUWP.exe</PackagePath>
-      <Modified>2017-07-31T14:20:46.862</Modified>
+      <Modified>2017-07-31T15:04:21.823</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dana\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
@@ -575,7 +575,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\bin\x86\Debug\WeatherUWP.xr.xml">
       <PackagePath>WeatherUWP.xr.xml</PackagePath>
-      <Modified>2017-07-31T14:20:20.466</Modified>
+      <Modified>2017-07-31T14:55:50.597</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -584,11 +584,11 @@
     <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-31T14:20:47.301</Modified>
+      <Modified>2017-07-31T15:04:22.270</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\bin\x86\Debug\Core\WeatherUWP.exe">
       <PackagePath>WeatherUWP.exe</PackagePath>
-      <Modified>2017-07-31T14:20:47.535</Modified>
+      <Modified>2017-07-31T15:04:22.498</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

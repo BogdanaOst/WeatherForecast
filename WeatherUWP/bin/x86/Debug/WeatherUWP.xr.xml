@@ -3,7 +3,7 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="CitiesVWInstance" />
     <RootPropertyPathName Name="Cities" />
-    <RootPropertyPathName Name="nameToDelete" />
+    <RootPropertyPathName Name="DeleteCommand" />
     <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="AddCommand" />
     <RootPropertyPathName Name="nameToAdd" />
@@ -73,15 +73,12 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Command" />
-      <RootProperty Name="Tag" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
-      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="SelectedItem" />
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
@@ -103,6 +100,7 @@
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Name" />
       <RootProperty Name="Text" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Foreground" />

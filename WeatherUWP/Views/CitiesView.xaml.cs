@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using WeatherUWP.Services;
+using WeatherUWP.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -28,12 +29,7 @@ namespace WeatherUWP.Views
             this.InitializeComponent();
         }
 
-        private void Delete_Click(object sender, RoutedEventArgs e)
-        {
-            var service = new CityService();
-            Button _button = (Button)sender;
-            service.Delete(_button.Tag.ToString());
-        }
+        
     }
     
 }
