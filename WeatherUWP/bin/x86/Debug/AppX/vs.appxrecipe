@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>4e8f056c-3262-479a-99c1-9934edb87e20</PackageIdentityName>
     <PackageIdentityPublisher>CN=Dana</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Dana\Desktop\Weather\WeatherUWP\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>2044D95C4BEEB6B5AE301F0B1798EF369CA65B2544F0381C1F805D8273F999FA</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>4e8f056c-3262-479a-99c1-9934edb87e20_1.0.0.0_x86__kxeps30rd9yb4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>4e8f056c-3262-479a-99c1-9934edb87e20_kxeps30rd9yb4!App</RegisteredUserModeAppID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-31T15:04:22.505</Modified>
+      <Modified>2017-07-31T20:37:21.681</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\bin\x86\Debug\WeatherUWP.exe">
+    <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\WeatherUWP.exe">
       <PackagePath>entrypoint\WeatherUWP.exe</PackagePath>
-      <Modified>2017-07-31T15:04:21.823</Modified>
+      <Modified>2017-07-31T20:37:21.343</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dana\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
@@ -535,60 +535,60 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T20:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2017-07-30T19:08:34.280</Modified>
+      <Modified>2017-07-31T19:53:24.238</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2017-07-29T16:53:12.067</Modified>
+      <Modified>2017-07-31T19:53:16.979</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-29T16:53:12.067</Modified>
+      <Modified>2017-07-31T19:53:16.979</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-29T16:53:12.067</Modified>
+      <Modified>2017-07-31T19:53:16.979</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-29T16:53:12.067</Modified>
+      <Modified>2017-07-31T19:53:16.994</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-29T16:53:12.067</Modified>
+      <Modified>2017-07-31T19:53:16.994</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-29T16:53:12.067</Modified>
+      <Modified>2017-07-31T19:53:16.994</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-29T16:53:12.067</Modified>
+      <Modified>2017-07-31T19:53:16.994</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\bin\x86\Debug\WeatherUWP.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\WeatherUWP.xr.xml">
       <PackagePath>WeatherUWP.xr.xml</PackagePath>
-      <Modified>2017-07-31T14:55:50.597</Modified>
+      <Modified>2017-07-31T20:23:36.212</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-07-29T17:47:00.527</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-07-31T15:04:22.270</Modified>
+      <Modified>2017-07-31T20:23:37.030</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Dana\Source\Repos\WeatherForecast\WeatherUWP\bin\x86\Debug\Core\WeatherUWP.exe">
+    <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\Core\WeatherUWP.exe">
       <PackagePath>WeatherUWP.exe</PackagePath>
-      <Modified>2017-07-31T15:04:22.498</Modified>
+      <Modified>2017-07-31T20:37:21.678</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -49,7 +49,7 @@ namespace WeatherUWP.ViewModels
             }
         }
 
-        void DeleteCity()
+        public void DeleteCity()
         {
             try
             {
@@ -62,5 +62,20 @@ namespace WeatherUWP.ViewModels
 
             }
         }
+
+        public void DeleteCity(string city)
+        {
+            try
+            {
+
+                service.Delete(city);
+                Update();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        
     }
 }

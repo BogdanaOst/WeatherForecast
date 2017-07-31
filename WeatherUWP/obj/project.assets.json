@@ -24231,10 +24231,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dana\\Source\\Repos\\WeatherForecast\\WeatherUWP\\WeatherUWP.csproj",
+      "projectUniqueName": "C:\\Users\\Dana\\Desktop\\Weather\\WeatherUWP\\WeatherUWP.csproj",
       "projectName": "WeatherUWP",
-      "projectPath": "C:\\Users\\Dana\\Source\\Repos\\WeatherForecast\\WeatherUWP\\WeatherUWP.csproj",
-      "outputPath": "C:\\Users\\Dana\\Source\\Repos\\WeatherForecast\\WeatherUWP\\obj\\",
+      "projectPath": "C:\\Users\\Dana\\Desktop\\Weather\\WeatherUWP\\WeatherUWP.csproj",
+      "outputPath": "C:\\Users\\Dana\\Desktop\\Weather\\WeatherUWP\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "uap10.0.10586"
