@@ -35,7 +35,7 @@ namespace WebWeather.Tests.DbTests
         public void When_GetAllFromController_Then_ListsAreEqual()
         {
             //Arrange & Act
-            var result = controller.Index() as ViewResult;
+            var result = controller.Index().Result as ViewResult;
             //Assert
             Assert.AreEqual(context.History.Count(), (result.Model as IEnumerable<HistoryViewModel>).Count());
         }

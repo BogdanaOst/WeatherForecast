@@ -22,51 +22,51 @@ namespace BLL.Managers
             Database = unit;
         }
 
-        public void Add(SelectedCityDTO historyDto)
+        public async Task AddAsync(SelectedCityDTO historyDto)
         {
             SelectedCity model = new SelectedCity()
             {
                 Id = historyDto.Id,
                 Name = historyDto.Name
             };
-            Database.SelectedCities.Create(model);
-            Database.Save();
+            await Database.SelectedCities.CreateAsync(model);
+            await Database.SaveAsync();
 
         }
-        public SelectedCityDTO GetById(int? id)
+        public async Task<SelectedCityDTO> GetByIdAsync(int? id)
         {
             try
             {
-                var cityDto = Database.SelectedCities.GetById(id.Value);
+                var cityDto = Database.SelectedCities.GetByIdAsync(id.Value);
                 Mapper.Initialize(cfg => cfg.CreateMap<SelectedCity, SelectedCityDTO>());
-                return Mapper.Map<SelectedCity, SelectedCityDTO>(cityDto);
+                return Mapper.Map<SelectedCity, SelectedCityDTO>(await cityDto);
             }
             catch (Exception ex)
             {
                 throw new ValidationException("Not found", "");
             }
         }
-        public List<SelectedCityDTO> GetAll()
+        public async Task<List<SelectedCityDTO>> GetAllAsync()
         {
 
             Mapper.Initialize(cfg => cfg.CreateMap<SelectedCity, SelectedCityDTO>());
-            return Mapper.Map<List<SelectedCity>, List<SelectedCityDTO>>(Database.SelectedCities.GetAll());
+            return Mapper.Map<List<SelectedCity>, List<SelectedCityDTO>>(await Database.SelectedCities.GetAllAsync());
         }
 
-        public void Update(SelectedCityDTO city_dto)
+        public async Task Update(SelectedCityDTO city_dto)
         {
             Mapper.Initialize(cfg => cfg.CreateMap<SelectedCityDTO, SelectedCity>());
             Database.SelectedCities.Update(Mapper.Map<SelectedCityDTO, SelectedCity>(city_dto));
-            Database.Save();
+           await Database.SaveAsync();
         }
         public void Dispose()
         {
             Database.Dispose();
         }
-        public void Delete(int id)
+        public async Task DeleteAsync(int id)
         {
-            Database.SelectedCities.Delete(id);
-            Database.Save();
+            await Database.SelectedCities.DeleteAsync(id);
+            await Database.SaveAsync();
         }
     }
 }

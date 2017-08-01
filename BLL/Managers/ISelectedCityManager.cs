@@ -9,11 +9,11 @@ namespace BLL.Managers
 {
     public interface ISelectedCityManager
     {
-        List<SelectedCityDTO> GetAll();
-        SelectedCityDTO GetById(int? id);
-        void Add(SelectedCityDTO city_dto);
-        void Update(SelectedCityDTO city_dto);
-        void Delete(int id);
+        Task<List<SelectedCityDTO>> GetAllAsync();
+        Task<SelectedCityDTO> GetByIdAsync(int? id);
+        Task AddAsync(SelectedCityDTO city_dto);
+        Task Update(SelectedCityDTO city_dto);
+        Task DeleteAsync(int id);
         void Dispose();
     }
 }

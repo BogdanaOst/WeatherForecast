@@ -4,6 +4,7 @@ using DAL.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using WebWeather.Models;
 
@@ -18,13 +19,13 @@ namespace WebWeather.Controllers
             this.service = service;
         }
 
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            List<HistoryDTO> historyDtos = service.GetAll();
+            var historyDtos = await service.GetAllAsync();
             Mapper.Initialize(cfg => cfg.CreateMap<HistoryDTO, HistoryViewModel>());
             var history = Mapper.Map<List<HistoryDTO>, List<HistoryViewModel>>(historyDtos);
             history.Reverse();
-            return View(history.GetRange(0,Math.Min(10,history.Count)));
+            return  View( history.GetRange(0,Math.Min(10,history.Count)));
         }
     }
 }

@@ -18,19 +18,19 @@ namespace DAL.Repositories
             db = context;
         }
 
-        public List<SelectedCity> GetAll()
+        public async Task<List<SelectedCity>> GetAllAsync()
         {
-            return db.SelectedCities.ToList();
+            return await db.SelectedCities.ToListAsync();
         }
 
-        public SelectedCity GetById(int id)
+        public async Task <SelectedCity> GetByIdAsync(int id)
         {
-            return db.SelectedCities.Find(id);
+            return await db.SelectedCities.FindAsync(id);
         }
 
-        public void Create(SelectedCity model)
+        public async Task CreateAsync(SelectedCity model)
         {
-            db.SelectedCities.Add(model);
+            await Task.Run(() => db.SelectedCities.Add(model)).ConfigureAwait(false);
         }
 
         public void Update(SelectedCity model)
@@ -38,15 +38,15 @@ namespace DAL.Repositories
             db.Entry(model).State = EntityState.Modified;
         }
 
-        public void Delete(int id)
+        public async Task DeleteAsync(int id)
         {
-            SelectedCity model = db.SelectedCities.Find(id);
+            SelectedCity model = await db.SelectedCities.FindAsync(id);
             if (model != null)
                 db.SelectedCities.Remove(model);
         }
-        public void Save()
+        public async Task SaveAsync()
         {
-            db.SaveChanges();
+            await db.SaveChangesAsync();
         }
         private bool disposed = false;
 

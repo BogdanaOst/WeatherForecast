@@ -21,7 +21,7 @@ namespace BLL.Managers
             Database = unit;
         }
        
-        public void Add(HistoryDTO historyDto)
+        public async Task AddAsync(HistoryDTO historyDto)
         {
             HistoryModel model = new HistoryModel()
             {
@@ -32,16 +32,16 @@ namespace BLL.Managers
                 NumOfDaysRequested = historyDto.NumOfDaysRequested,
                 Icon=historyDto.Icon
             };
-            Database.History.Create(model);
-            Database.Save();
+            await Database.History.CreateAsync(model);
+            await Database.SaveAsync();
            
         }
        
-        public List<HistoryDTO> GetAll()
+        public async Task<List<HistoryDTO>> GetAllAsync()
         {
            
             Mapper.Initialize(cfg => cfg.CreateMap<HistoryModel, HistoryDTO>());
-            return Mapper.Map<List<HistoryModel>, List<HistoryDTO>>(Database.History.GetAll());
+            return Mapper.Map<List<HistoryModel>, List<HistoryDTO>>(await Database.History.GetAllAsync());
         }
 
         public void Dispose()

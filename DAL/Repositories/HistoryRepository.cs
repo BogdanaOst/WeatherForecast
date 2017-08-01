@@ -18,19 +18,19 @@ namespace DAL.Repositories
             db = context;
         }
 
-        public List<HistoryModel> GetAll()
+        public async Task<List<HistoryModel>> GetAllAsync()
         {
-            return db.History.ToList();
+            return await db.History.ToListAsync();
         }
 
-        public HistoryModel GetById(int id)
+        public async Task<HistoryModel> GetByIdAsync(int id)
         {
-            return db.History.Find(id);
+            return await db.History.FindAsync(id);
         }
 
-        public void Create(HistoryModel model)
+        public async Task CreateAsync(HistoryModel model)
         {
-            db.History.Add(model);
+           await Task.Run(()=>db.History.Add(model)).ConfigureAwait(false);
         }
 
         public void Update(HistoryModel model)
@@ -38,15 +38,15 @@ namespace DAL.Repositories
             db.Entry(model).State = EntityState.Modified;
         }
 
-        public void Delete(int id)
+        public async Task DeleteAsync(int id)
         {
-            HistoryModel model = db.History.Find(id);
+            HistoryModel model = await db.History.FindAsync(id);
             if (model != null)
                 db.History.Remove(model);
         }
-        public void Save()
+        public async Task SaveAsync()
         {
-            db.SaveChanges();
+            await db.SaveChangesAsync();
         }
         private bool disposed = false;
 

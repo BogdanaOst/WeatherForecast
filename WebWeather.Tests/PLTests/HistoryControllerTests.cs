@@ -24,7 +24,7 @@ namespace WebWeather.Tests.PL.Tests
         public void SetUp()
         {
             var historyRepository = A.Fake<IRepository<HistoryModel>>();
-            A.CallTo(() => historyRepository.GetAll()).Returns(Data);
+            A.CallTo(() => historyRepository.GetAllAsync()).Returns(Data);
             var unitOfWork = A.Fake<IUnitOfWork>();
             A.CallTo(() => unitOfWork.History).Returns(historyRepository);
             service = new HistoryManager(unitOfWork);
@@ -34,7 +34,7 @@ namespace WebWeather.Tests.PL.Tests
         {
             Data.Add(new HistoryModel());
             var controller = new HistoryController(service);
-            var res = controller.Index() as ViewResult;
+            var res = controller.Index().Result as ViewResult;
             Assert.AreEqual(typeof(List<HistoryViewModel>), res.Model.GetType());
         }
         [Test]

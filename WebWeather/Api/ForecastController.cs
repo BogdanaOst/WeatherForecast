@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using WebWeather.Models;
 using WebWeather.Services;
@@ -18,7 +19,7 @@ namespace WebWeather.Api
         //GET api/Forecast/?name=CityName&days=NumOfDays
 
         [HttpGet]
-        public Forecast GetForecast (string name,int days)
+        public async Task<Forecast> GetForecast (string name,int days)
         {
             ForecastService service = new ForecastService();
             var forecast= service.GetForecast(new Parametrs() { NumOfDays = days, CityName = name });
@@ -37,7 +38,7 @@ namespace WebWeather.Api
 
                 Mapper.Initialize(cfg => cfg.CreateMap<HistoryViewModel, HistoryDTO>());
                 var historyDto = Mapper.Map<HistoryViewModel, HistoryDTO>(model);
-                history.Add(historyDto);
+                await history.AddAsync(historyDto);
             }
 
             return forecast;

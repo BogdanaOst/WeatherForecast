@@ -7,23 +7,24 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
 	DataContext="{Binding CitiesVWInstance, Source={StaticResource Locator}}">
-   
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        
-        <TextBox x:ConnectionId='1' x:Name="textBox" 
+            <Button x:ConnectionId='1' x:Name="button" 
+                Content="Add" 
+                HorizontalAlignment="Left" 
+                Margin="453,0,0,543" 
+                VerticalAlignment="Bottom"
+                Command="{Binding AddCommand}"/>
+            <TextBox x:ConnectionId='2' x:Name="textBox" 
                  HorizontalAlignment="Left" 
-                 Margin="231,0,0,509" 
+                 Margin="132,0,0,544" 
                  TextWrapping="Wrap" 
                  PlaceholderText="Add city" 
                  VerticalAlignment="Bottom" 
                  Width="257"
                  Text="{Binding nameToAdd, Mode=TwoWay}"/>
-        <Button x:ConnectionId='2' x:Name="button" 
-                Content="Add" 
-                HorizontalAlignment="Left" 
-                Margin="518,0,0,508" 
-                VerticalAlignment="Bottom"
-                Command="{Binding AddCommand}"/>
+      
+
         <ListView ItemsSource="{Binding Cities}"
                   Margin="0,172,302,29" HorizontalAlignment="Right" Width="491" >
             <ListView.ItemTemplate>

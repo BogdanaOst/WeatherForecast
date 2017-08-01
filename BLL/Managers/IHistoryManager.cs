@@ -9,8 +9,8 @@ namespace BLL.Managers
 {
     public interface IHistoryManager
     {
-        List<HistoryDTO> GetAll();
-        void Add(HistoryDTO history_dto);
+        Task<List<HistoryDTO>> GetAllAsync();
+        Task AddAsync(HistoryDTO history_dto);
         void Dispose();
     }
 }

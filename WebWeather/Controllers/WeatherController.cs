@@ -3,6 +3,7 @@ using BLL.Managers;
 using DAL.DTOs;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using WebWeather.Models;
 using WebWeather.Services;
@@ -18,26 +19,30 @@ namespace WebWeather.Controllers
         List<SelectedCityViewModel> selectedCitiesList;
         public static Forecast forecast { get; private set; }
 
-        public WeatherController(IForecastService iservice, IHistoryManager ihistoryManager, ISelectedCityManager icityManager)
+        public  WeatherController(IForecastService iservice, IHistoryManager ihistoryManager, ISelectedCityManager icityManager)
         {
             forecastService = iservice;
             historyManager = ihistoryManager;
             cityManager = icityManager;
-            var citiesDtos = cityManager.GetAll();
+           
+        }
+        public async Task setCities()
+        {
+            var citiesDtos = await cityManager.GetAllAsync();
             Mapper.Initialize(cfg => cfg.CreateMap<SelectedCityDTO, SelectedCityViewModel>());
             selectedCitiesList = Mapper.Map<List<SelectedCityDTO>, List<SelectedCityViewModel>>(citiesDtos);
 
             ViewBag.Cities = selectedCitiesList;
         }
-
         // GET: Weather
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
+            await setCities();
             return View();
         }
 
         [HttpPost]
-        public ActionResult Index(Parametrs parametrs)
+        public async Task<ActionResult> Index(Parametrs parametrs)
         {
             if (!string.IsNullOrWhiteSpace(parametrs.CityName))
             {
@@ -61,12 +66,13 @@ namespace WebWeather.Controllers
 
                 Mapper.Initialize(cfg => cfg.CreateMap<HistoryViewModel, HistoryDTO>());
                 var historyDto = Mapper.Map<HistoryViewModel, HistoryDTO>(model);
-                historyManager.Add(historyDto);
+                await historyManager.AddAsync(historyDto);
             }
             catch (Exception ex)
             {
                 return View(forecast);
             }
+            await setCities();
             return View(forecast);
         }
         public ActionResult OtherCity()

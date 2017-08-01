@@ -9,11 +9,11 @@ namespace DAL.Repositories
     public interface IRepository<T>:IDisposable
         where T : class
     {
-        List<T> GetAll();
-        T GetById(int id);
-        void Create(T item);
+        Task<List<T>> GetAllAsync();
+        Task<T> GetByIdAsync(int id);
+        Task CreateAsync(T item);
         void Update(T item);
-        void Delete(int id);
-        void Save();
+        Task DeleteAsync(int id);
+        Task SaveAsync();
     }
 }

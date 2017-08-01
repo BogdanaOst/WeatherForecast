@@ -3,6 +3,7 @@ using BLL.Managers;
 using DAL.DTOs;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using WebWeather.Models;
 
@@ -16,9 +17,9 @@ namespace WebWeather.Controllers
             manager = imanager;
         }
 
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            List<SelectedCityDTO> citiesDtos = manager.GetAll();
+            List<SelectedCityDTO> citiesDtos = await manager.GetAllAsync();
             Mapper.Initialize(cfg => cfg.CreateMap<SelectedCityDTO, SelectedCityViewModel>());
             var result = Mapper.Map<List<SelectedCityDTO>, List<SelectedCityViewModel>>(citiesDtos);
             return View(result);
@@ -30,7 +31,7 @@ namespace WebWeather.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(SelectedCityViewModel model)
+        public async Task<ActionResult> Create(SelectedCityViewModel model)
         {
             if (ModelState.IsValid && !string.IsNullOrWhiteSpace(model.Name))
             {
@@ -38,18 +39,18 @@ namespace WebWeather.Controllers
                 {
                     Name = model.Name
                 };
-                manager.Add(cityDto);
+                await manager.AddAsync(cityDto);
                 return RedirectToAction("Index");
             }
             else
                 return View(model);
         }
         [HttpGet]
-        public ActionResult Edit(int? id)
+        public async Task<ActionResult> Edit(int? id)
         {
             try
             {
-                SelectedCityDTO cityDto = manager.GetById(id);
+                SelectedCityDTO cityDto = await manager.GetByIdAsync(id);
                 Mapper.Initialize(cfg => cfg.CreateMap<SelectedCityDTO, SelectedCityViewModel>());
                 var res = Mapper.Map<SelectedCityDTO, SelectedCityViewModel>(cityDto);
                 return View(res);
@@ -67,10 +68,10 @@ namespace WebWeather.Controllers
             manager.Update(Mapper.Map<SelectedCityViewModel, SelectedCityDTO>(model));
             return RedirectToAction("Index");
         }
-        public ActionResult Delete(int? id)
+        public async Task<ActionResult> Delete(int? id)
         {
             
-            manager.Delete(id.Value);
+            await manager.DeleteAsync(id.Value);
             return RedirectToAction("Index");
         }
 

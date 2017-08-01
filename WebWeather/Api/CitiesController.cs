@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using WebWeather.Models;
 
@@ -22,9 +23,9 @@ namespace WebWeather.Api
 
         // GET api/Cities
         [HttpGet]
-        public List<SelectedCityViewModel> GetAll()
+        public async Task<List<SelectedCityViewModel>> GetAll()
         {
-            List<SelectedCityDTO> citiesDtos = manager.GetAll();
+            List<SelectedCityDTO> citiesDtos = await manager.GetAllAsync();
             Mapper.Initialize(cfg => cfg.CreateMap<SelectedCityDTO, SelectedCityViewModel>());
             var list = Mapper.Map<List<SelectedCityDTO>, List<SelectedCityViewModel>>(citiesDtos);
             return list;
@@ -32,19 +33,19 @@ namespace WebWeather.Api
 
         // POST api/Cities/?name=CityName
         [HttpPost]
-        public HttpResponseMessage Add(string name)
+        public async Task<HttpResponseMessage> Add(string name)
         {
-            manager.Add(new SelectedCityDTO() { Name = name });
+            await manager.AddAsync(new SelectedCityDTO() { Name = name });
             return new HttpResponseMessage() { StatusCode = HttpStatusCode.OK };
         }
 
         //DELETE api/Cities/id
         [HttpDelete]
-        public HttpResponseMessage Delete(int id)
+        public async Task<HttpResponseMessage> Delete(int id)
         {
-            if (manager.GetById(id) != null)
+            if (manager.GetByIdAsync(id) != null)
             {
-                manager.Delete(id);
+                await manager.DeleteAsync(id);
                 return new HttpResponseMessage() { StatusCode = HttpStatusCode.OK };
             } else
                 return new HttpResponseMessage() { StatusCode = HttpStatusCode.BadRequest };
@@ -53,12 +54,12 @@ namespace WebWeather.Api
 
         //DELETE api/Cities/?name=CityName
         [HttpDelete]
-        public HttpResponseMessage Delete(string name)
+        public async Task<HttpResponseMessage> Delete(string name)
         {
-            var item = manager.GetAll().FirstOrDefault(x => x.Name == name);
+            var item = (await manager.GetAllAsync()).FirstOrDefault(x => x.Name == name);
             if (item!= null)
             {
-                manager.Delete(item.Id);
+                await manager.DeleteAsync(item.Id);
                 return new HttpResponseMessage() { StatusCode = HttpStatusCode.OK };
             }
             else

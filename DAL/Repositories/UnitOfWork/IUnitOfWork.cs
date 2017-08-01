@@ -12,6 +12,6 @@ namespace DAL.UnitOfWork
     {
         IRepository<HistoryModel> History { get; }
         IRepository<SelectedCity> SelectedCities { get; }
-        void Save();
+        Task SaveAsync();
     }
 }

@@ -16,7 +16,7 @@ namespace WebWeather.Tests.ManagersTests
     public class HistoryTests
     {
         [Test]
-        public void GetAll_When_NoInit_Then_EmptyListButNotNull()
+        public async Task GetAll_When_NoInit_Then_EmptyListButNotNull()
         {
             //Arrange
             var historyRepository = A.Fake<IRepository<HistoryModel>>();
@@ -25,8 +25,8 @@ namespace WebWeather.Tests.ManagersTests
             //Act
             var historyService = new HistoryManager(unitOfWork);
             //Assert
-            Assert.NotNull(historyService.GetAll());
-            Assert.IsEmpty(historyService.GetAll());
+            Assert.NotNull(await historyService.GetAllAsync());
+            Assert.IsEmpty(await historyService.GetAllAsync());
         }
     }
 }

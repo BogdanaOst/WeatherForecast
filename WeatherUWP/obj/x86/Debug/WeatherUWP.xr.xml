@@ -4,15 +4,14 @@
     <RootPropertyPathName Name="CitiesVWInstance" />
     <RootPropertyPathName Name="Cities" />
     <RootPropertyPathName Name="Name" />
-    <RootPropertyPathName Name="AddCommand" />
     <RootPropertyPathName Name="nameToAdd" />
+    <RootPropertyPathName Name="AddCommand" />
     <RootPropertyPathName Name="HistoryVMInstance" />
     <RootPropertyPathName Name="history" />
     <RootPropertyPathName Name="DayTemp" />
     <RootPropertyPathName Name="City" />
     <RootPropertyPathName Name="Icon" />
     <RootPropertyPathName Name="Date" />
-    <RootPropertyPathName Name="MainVMInstance" />
     <RootPropertyPathName Name="WeatherVMInstance" />
     <RootPropertyPathName Name="_forecast" />
     <RootPropertyPathName Name="forecast" />
@@ -56,16 +55,6 @@
       <RootMethod Name="SetRowSpan" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="Height" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
@@ -76,6 +65,16 @@
       <RootProperty Name="CommandParameter" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
