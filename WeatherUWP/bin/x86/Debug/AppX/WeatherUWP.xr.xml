@@ -12,6 +12,7 @@
     <RootPropertyPathName Name="City" />
     <RootPropertyPathName Name="Icon" />
     <RootPropertyPathName Name="Date" />
+    <RootPropertyPathName Name="MainVMInstance" />
     <RootPropertyPathName Name="WeatherVMInstance" />
     <RootPropertyPathName Name="_forecast" />
     <RootPropertyPathName Name="forecast" />
@@ -43,7 +44,6 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="RowDefinitions" />
-      <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
@@ -72,11 +72,10 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Command" />
-      <RootProperty Name="Tag" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="CommandParameter" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
-      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
@@ -101,7 +100,6 @@
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Name" />
       <RootProperty Name="Text" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Foreground" />

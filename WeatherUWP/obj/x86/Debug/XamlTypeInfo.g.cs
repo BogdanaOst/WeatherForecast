@@ -136,9 +136,9 @@ namespace WeatherUWP.WeatherUWP_XamlTypeInfo
             _typeNameTable[0] = "WeatherUWP.ViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "WeatherUWP.ViewModels.HistoryViewModel";
-            _typeNameTable[3] = "WeatherUWP.ViewModels.WeatherViewModel";
-            _typeNameTable[4] = "GalaSoft.MvvmLight.ViewModelBase";
-            _typeNameTable[5] = "GalaSoft.MvvmLight.ObservableObject";
+            _typeNameTable[3] = "GalaSoft.MvvmLight.ViewModelBase";
+            _typeNameTable[4] = "GalaSoft.MvvmLight.ObservableObject";
+            _typeNameTable[5] = "WeatherUWP.ViewModels.WeatherViewModel";
             _typeNameTable[6] = "WeatherUWP.ViewModels.CitiesViewModel";
             _typeNameTable[7] = "WeatherUWP.Views.CitiesView";
             _typeNameTable[8] = "Windows.UI.Xaml.Controls.Page";
@@ -151,9 +151,9 @@ namespace WeatherUWP.WeatherUWP_XamlTypeInfo
             _typeTable[0] = typeof(global::WeatherUWP.ViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::WeatherUWP.ViewModels.HistoryViewModel);
-            _typeTable[3] = typeof(global::WeatherUWP.ViewModels.WeatherViewModel);
-            _typeTable[4] = typeof(global::GalaSoft.MvvmLight.ViewModelBase);
-            _typeTable[5] = typeof(global::GalaSoft.MvvmLight.ObservableObject);
+            _typeTable[3] = typeof(global::GalaSoft.MvvmLight.ViewModelBase);
+            _typeTable[4] = typeof(global::GalaSoft.MvvmLight.ObservableObject);
+            _typeTable[5] = typeof(global::WeatherUWP.ViewModels.WeatherViewModel);
             _typeTable[6] = typeof(global::WeatherUWP.ViewModels.CitiesViewModel);
             _typeTable[7] = typeof(global::WeatherUWP.Views.CitiesView);
             _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.Page);
@@ -197,8 +197,8 @@ namespace WeatherUWP.WeatherUWP_XamlTypeInfo
 
         private object Activate_0_ViewModelLocator() { return new global::WeatherUWP.ViewModelLocator(); }
         private object Activate_2_HistoryViewModel() { return new global::WeatherUWP.ViewModels.HistoryViewModel(); }
-        private object Activate_3_WeatherViewModel() { return new global::WeatherUWP.ViewModels.WeatherViewModel(); }
-        private object Activate_5_ObservableObject() { return new global::GalaSoft.MvvmLight.ObservableObject(); }
+        private object Activate_4_ObservableObject() { return new global::GalaSoft.MvvmLight.ObservableObject(); }
+        private object Activate_5_WeatherViewModel() { return new global::WeatherUWP.ViewModels.WeatherViewModel(); }
         private object Activate_6_CitiesViewModel() { return new global::WeatherUWP.ViewModels.CitiesViewModel(); }
         private object Activate_7_CitiesView() { return new global::WeatherUWP.Views.CitiesView(); }
         private object Activate_10_HistoryView() { return new global::WeatherUWP.Views.HistoryView(); }
@@ -230,27 +230,27 @@ namespace WeatherUWP.WeatherUWP_XamlTypeInfo
                 break;
 
             case 2:   //  WeatherUWP.ViewModels.HistoryViewModel
-                userType = new global::WeatherUWP.WeatherUWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 3:   //  WeatherUWP.ViewModels.WeatherViewModel
                 userType = new global::WeatherUWP.WeatherUWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  GalaSoft.MvvmLight.ViewModelBase
+            case 3:   //  GalaSoft.MvvmLight.ViewModelBase
                 userType = new global::WeatherUWP.WeatherUWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ObservableObject"));
                 xamlType = userType;
                 break;
 
-            case 5:   //  GalaSoft.MvvmLight.ObservableObject
+            case 4:   //  GalaSoft.MvvmLight.ObservableObject
                 userType = new global::WeatherUWP.WeatherUWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_5_ObservableObject;
+                userType.Activator = Activate_4_ObservableObject;
+                xamlType = userType;
+                break;
+
+            case 5:   //  WeatherUWP.ViewModels.WeatherViewModel
+                userType = new global::WeatherUWP.WeatherUWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 

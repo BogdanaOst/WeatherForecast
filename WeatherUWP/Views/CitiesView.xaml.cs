@@ -29,13 +29,7 @@ namespace WeatherUWP.Views
             this.InitializeComponent();
         }
 
-        private void Delete_Click(object sender, RoutedEventArgs e)
-        {
-            var button = (Button)sender;
-            string cityName=button.Tag.ToString();
-            var model = new CitiesViewModel();
-            model.DeleteCity(cityName);
-        }
+       
     }
     
 }

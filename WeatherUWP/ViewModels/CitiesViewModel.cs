@@ -24,9 +24,9 @@ namespace WeatherUWP.ViewModels
             Cities = new ObservableCollection<CityModel>();
             Update();
             AddCommand = new RelayCommand(AddCity);
-            DeleteCommand = new RelayCommand(DeleteCity);
+            DeleteCommand = new RelayCommand<object>(DeleteCity);
         }
-
+       
         void Update()
         {
             Cities.Clear();
@@ -35,6 +35,7 @@ namespace WeatherUWP.ViewModels
             {
                 Cities.Add(x);
             }
+            MessengerInstance.Send(new Message<ObservableCollection<CityModel>>());
         }
         void AddCity()
         {
@@ -49,12 +50,12 @@ namespace WeatherUWP.ViewModels
             }
         }
 
-        public void DeleteCity()
+        public void DeleteCity(object nameToDelete)
         {
             try
             {
                 
-                service.Delete(nameToDelete);
+                service.Delete(nameToDelete.ToString());
                 Update();
             }
             catch (Exception ex)
@@ -63,19 +64,7 @@ namespace WeatherUWP.ViewModels
             }
         }
 
-        public void DeleteCity(string city)
-        {
-            try
-            {
-
-                service.Delete(city);
-                Update();
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
+        
         
     }
 }

@@ -1,21 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
+using GalaSoft.MvvmLight;
+using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WeatherUWP.Models;
 using WeatherUWP.Services;
-
 namespace WeatherUWP.ViewModels
 {
-    public class HistoryViewModel
+    public class HistoryViewModel : ViewModelBase
     {
-        public List<HistoryModel> history { get; set; }
+        public ObservableCollection<HistoryModel> history { get; private set; }
         public HistoryViewModel()
         {
+            history = new ObservableCollection<HistoryModel>();
+            Update();
+            MessengerInstance.Register<Message<WeatherModel>>(this, list => { Update(); });
+        }
+
+        public void Update()
+        {
             var service = new HistoryService();
-            history = service.Get().ToList();
-            history.Reverse();
+            var list = service.Get().ToList();
+            list.Reverse();
+            history.Clear();
+            foreach (var x in list)
+                history.Add(x);
         }
     }
 }
