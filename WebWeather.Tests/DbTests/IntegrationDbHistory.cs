@@ -32,19 +32,19 @@ namespace WebWeather.Tests.DbTests
         }
 
         [Test]
-        public void When_GetAllFromController_Then_ListsAreEqual()
+        public async Task When_GetAllFromController_Then_ListsAreEqual()
         {
             //Arrange & Act
-            var result = controller.Index().Result as ViewResult;
+            var result = await controller.Index() as ViewResult;
             //Assert
             Assert.AreEqual(context.History.Count(), (result.Model as IEnumerable<HistoryViewModel>).Count());
         }
       
         [TearDown]
-        public void TearDown()
+        public async Task TearDown()
         {
             context.History.RemoveRange(context.History);
-            context.SaveChanges();
+           await context.SaveChangesAsync();
         }
     }
 }

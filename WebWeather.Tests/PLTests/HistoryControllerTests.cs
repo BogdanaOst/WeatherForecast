@@ -30,11 +30,11 @@ namespace WebWeather.Tests.PL.Tests
             service = new HistoryManager(unitOfWork);
         }
         [Test]
-        public void Index_ReturnsCorrectType()
+        public async Task Index_ReturnsCorrectType()
         {
             Data.Add(new HistoryModel());
             var controller = new HistoryController(service);
-            var res = controller.Index().Result as ViewResult;
+            var res = await controller.Index() as ViewResult;
             Assert.AreEqual(typeof(List<HistoryViewModel>), res.Model.GetType());
         }
         [Test]

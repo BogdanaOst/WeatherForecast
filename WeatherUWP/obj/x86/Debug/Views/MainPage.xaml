@@ -17,7 +17,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Frame x:ConnectionId='1' Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch" x:Name="Frame"/>
-        <CommandBar>
+        <CommandBar Grid.RowSpan="2">
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>

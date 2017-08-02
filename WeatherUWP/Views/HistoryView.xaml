@@ -7,50 +7,44 @@
     DataContext="{Binding HistoryVMInstance, Source={StaticResource Locator}}"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ListView ItemsSource="{Binding history}" Margin="0,0,267,40" Height="463" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="491" >
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,50,0,0">
+        <ListView Grid.Column="1" Grid.RowSpan="5" ItemsSource="{Binding history}" >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Margin="16">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="40"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
+                    <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="24"/>
-                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <StackPanel Orientation="Horizontal"
-                                    Grid.Column="1"
-                                    Grid.Row="1">
-                            <TextBlock Text="{Binding Date}" 
-                                       Grid.RowSpan="1" 
-                                       Grid.Column="0"/>
-                            <Image Source="{Binding Icon}"  
-                                   Width="50" Height="50" 
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Grid.RowSpan="1" Grid.Column="0"/>
-                            <TextBlock Text="{Binding City}"
-                                   Foreground="Black"
-                                   FontSize="20"
-                                   Padding="20,0,0,0"
-                                   Grid.Column="1"
-                                   Grid.Row="0"/>
-                            <TextBlock Text="{Binding DayTemp}"
-                                   Foreground="Black"
-                                   FontSize="20"
-                                   Padding="20,0,0,0"
-                                   Grid.Column="1"
-                                   Grid.Row="0"/>
-                            <TextBlock Text="°C"
-                                   Foreground="Black"
-                                   FontSize="20"
-                                   Padding="0,0,0,0"
-                                   Grid.Column="2"
-                                   Grid.Row="0"/>
-
-                        </StackPanel>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Date}"
+                          FontWeight="Bold" 
+                          FontSize="18"         
+                          Grid.Column="0"/>
+                        <Image Source="{Binding Icon}"
+                               Grid.Column="1"/>
+                        <TextBlock Text="{Binding City}"
+                          FontWeight="Bold"         
+                          Grid.Column="2"
+                          Margin="5,0,0,0"/>
+                        <TextBlock Text="{Binding NumOfDaysRequested}"
+                          Margin="5,0,0,0"
+                          Grid.Column="3"/>
+                        <TextBlock Text=" days requested"
+                          Grid.Column="4"/>
+                        <TextBlock Text="{Binding DayTemp}"
+                           Margin="5,0,0,0"
+                           Grid.Column="5"/>
+                        <TextBlock Text="°C"
+                          Grid.Column="6"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

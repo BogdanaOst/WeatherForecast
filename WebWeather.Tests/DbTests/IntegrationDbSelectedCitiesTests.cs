@@ -3,6 +3,7 @@ using DAL.Context;
 using DAL.UnitOfWork;
 using NUnit.Framework;
 using System.Linq;
+using System.Threading.Tasks;
 using WebWeather.Controllers;
 using WebWeather.Models;
 
@@ -26,33 +27,33 @@ namespace WebWeather.Tests.DbTests
         }
 
         [Test]
-        public void When_CreateFromControllerValid_Then_AddsToDb()
+        public async Task When_CreateFromControllerValid_Then_AddsToDb()
         {
             //Arrange
             var city = new SelectedCityViewModel() { Id = 1, Name = "Kharkiv" };
             //Act
-            controller.Create(city);
+            await controller.Create(city);
             //Assert
             Assert.AreEqual(1, context.SelectedCities.Count());
         }
 
         [Test]
-        public void When_CreateFromControllerInvallidModel_Then_DoesntAddToDb()
+        public async Task When_CreateFromControllerInvallidModel_Then_DoesntAddToDb()
         {
             //Arrange & Act
-            controller.Create(new SelectedCityViewModel());
+            await controller.Create(new SelectedCityViewModel());
             //Assert
             Assert.AreEqual(0, context.SelectedCities.Count());
         }
 
         [Test]
-        public void When_DeleteByCorrectId_Then_DbUpdates()
+        public async Task When_DeleteByCorrectId_Then_DbUpdates()
         {
             //Arrange
             var city = new SelectedCityViewModel() { Id = 1, Name = "Kharkiv" };
-            controller.Create(city);
+            await controller.Create(city);
             //Act
-            controller.Delete(context.SelectedCities.FirstOrDefault(x=>x.Name== "Kharkiv").Id);
+            await controller.Delete(context.SelectedCities.FirstOrDefault(x=>x.Name== "Kharkiv").Id);
             context.SaveChanges();
             //Assert
             Assert.AreEqual(0, context.SelectedCities.Count());

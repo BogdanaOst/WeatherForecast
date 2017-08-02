@@ -2,13 +2,10 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="CitiesVWInstance" />
-    <RootPropertyPathName Name="Cities" />
-    <RootPropertyPathName Name="Name" />
-    <RootPropertyPathName Name="nameToAdd" />
-    <RootPropertyPathName Name="AddCommand" />
     <RootPropertyPathName Name="HistoryVMInstance" />
     <RootPropertyPathName Name="history" />
     <RootPropertyPathName Name="DayTemp" />
+    <RootPropertyPathName Name="NumOfDaysRequested" />
     <RootPropertyPathName Name="City" />
     <RootPropertyPathName Name="Icon" />
     <RootPropertyPathName Name="Date" />
@@ -16,11 +13,10 @@
     <RootPropertyPathName Name="_forecast" />
     <RootPropertyPathName Name="forecast" />
     <RootPropertyPathName Name="Pressure" />
-    <RootPropertyPathName Name="MinTemp" />
-    <RootPropertyPathName Name="MaxTemp" />
-    <RootPropertyPathName Name="NumOfDays" />
     <RootPropertyPathName Name="ForecastCommand" />
+    <RootPropertyPathName Name="NumOfDays" />
     <RootPropertyPathName Name="city" />
+    <RootPropertyPathName Name="Cities" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -39,84 +35,41 @@
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
-      <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="ColumnDefinitions" />
+      <RootProperty Name="Children" />
       <RootProperty Name="RowDefinitions" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Width" />
+      <RootProperty Name="ColumnDefinitions" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
-      <RootMethod Name="GetRow" />
-      <RootMethod Name="SetRow" />
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Content" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Command" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="CommandParameter" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="Height" />
-    </RootType>
+    <RootType FullName="WeatherUWP.Views.CitiesView" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Width" />
       <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
-      <RootProperty Name="Width" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Orientation" />
-      <RootProperty Name="Children" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontWeight" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="Padding" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="TextAlignment" />
     </RootType>
-    <RootType FullName="WeatherUWP.Views.CitiesView" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="WeatherUWP.Views.HistoryView" />
     <RootType FullName="Windows.UI.Xaml.Controls.Frame">
@@ -133,15 +86,28 @@
     </RootType>
     <RootType FullName="WeatherUWP.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="MinWidth" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="PlaceholderText" />
       <RootProperty Name="SelectedItem" />
-      <RootProperty Name="RenderTransformOrigin" />
       <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Command" />
     </RootType>
     <RootType FullName="WeatherUWP.Views.WeatherView" />
   </Roots.RootTypes>
