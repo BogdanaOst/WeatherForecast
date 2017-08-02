@@ -19,7 +19,7 @@ namespace WeatherUWP.ViewModels
         public void Update()
         {
             var service = new HistoryService();
-            var list = service.Get().ToList();
+            var list = service.Get().Result;
             list.Reverse();
             history.Clear();
             foreach (var x in list)

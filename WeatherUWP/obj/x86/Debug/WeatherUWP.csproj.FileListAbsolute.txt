@@ -390,7 +390,6 @@ C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\System.Xml.ReaderWriter.d
 C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\System.Xml.XDocument.dll
 C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\System.Xml.XmlDocument.dll
 C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\System.Xml.XmlSerializer.dll
-C:\Users\Dana\Desktop\Weather\WeatherUWP\obj\x86\Debug\WeatherUWP.csprojResolveAssemblyReference.cache
 C:\Users\Dana\Desktop\Weather\WeatherUWP\obj\x86\Debug\App.g.i.cs
 C:\Users\Dana\Desktop\Weather\WeatherUWP\obj\x86\Debug\App.g.cs
 C:\Users\Dana\Desktop\Weather\WeatherUWP\obj\x86\Debug\Views\CitiesView.g.i.cs
@@ -499,3 +498,5 @@ C:\Users\Dana\Desktop\Weather\WeatherUWP\obj\x86\Debug\resources.en-us.resfiles
 C:\Users\Dana\Desktop\Weather\WeatherUWP\obj\x86\Debug\resources.en-us.resfiles.intermediate
 C:\Users\Dana\Desktop\Weather\WeatherUWP\obj\x86\Debug\GalaSoft.MvvmLight.Platform.pri.xml
 C:\Users\Dana\Desktop\Weather\WeatherUWP\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Dana\Desktop\Weather\WeatherUWP\obj\x86\Debug\Microsoft.Practices.ServiceLocation\en-US\Microsoft.Practices.ServiceLocation.Properties.Resources.resw
+C:\Users\Dana\Desktop\Weather\WeatherUWP\obj\x86\Debug\WeatherUWP.csprojResolveAssemblyReference.cache

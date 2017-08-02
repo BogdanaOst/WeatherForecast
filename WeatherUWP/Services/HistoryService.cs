@@ -13,11 +13,11 @@ namespace WeatherUWP.Services
     {
         public async Task<IEnumerable<HistoryModel>> Get()
         {
-            var path = "http://localhost:59721/api/History";
+            var path = $"http://localhost:{Localhost.port}/api/History";
             var client = new HttpClient();
             var response = client.GetAsync(path).Result;
             var result = await response.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject<IEnumerable<HistoryModel>>(result);
+            return (JsonConvert.DeserializeObject<IEnumerable<HistoryModel>>(result)).Reverse();
         }
     }
 }

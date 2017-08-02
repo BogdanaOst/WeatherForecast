@@ -100,6 +100,7 @@
     <Compile Include="Models\Message.cs" />
     <Compile Include="Services\CityService.cs" />
     <Compile Include="Services\HistoryService.cs" />
+    <Compile Include="Services\Localhost.cs" />
     <Compile Include="Services\WeatherService.cs" />
     <Compile Include="ViewModelLocator.cs" />
     <Compile Include="ViewModels\CitiesViewModel.cs" />

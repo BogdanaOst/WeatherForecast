@@ -39,7 +39,7 @@ namespace WeatherUWP.ViewModels
             var cityList = serv.GetSelected();
             if (cityList != null)
             Cities.Clear();   
-            foreach (var item in cityList)
+            foreach (var item in cityList.Result)
                 Cities.Add(item.Name);
         }
            

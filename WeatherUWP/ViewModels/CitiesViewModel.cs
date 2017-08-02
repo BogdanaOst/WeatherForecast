@@ -4,15 +4,25 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using WeatherUWP.Models;
 using WeatherUWP.Services;
 
 namespace WeatherUWP.ViewModels
 {
-    public class CitiesViewModel: ViewModelBase
+    public class CitiesViewModel : ViewModelBase
     {
-        public ObservableCollection<CityModel> Cities { get; set; }
+        private ObservableCollection<CityModel> _cities;
+        public ObservableCollection<CityModel> Cities
+        {
+            get { return _cities; }
+            set
+            {
+                _cities = value;
+                RaisePropertyChanged("Cities");
+            }
+        }
         CityService service = new CityService();
 
         public ICommand AddCommand { get; set; }
@@ -26,49 +36,47 @@ namespace WeatherUWP.ViewModels
             Cities = new ObservableCollection<CityModel>();
             Update();
             AddCommand = new RelayCommand(AddCity);
-            DeleteCommand = new RelayCommand(DeleteCity);
+            DeleteCommand = new RelayCommand(async()=>await DeleteCity());
+
+            void Update()
+            {
+
+                var list = service.GetSelected().Result;
+                Cities.Clear();
+                foreach (var x in list)
+                {
+                    Cities.Add(x);
+                }
+                MessengerInstance.Send(new Message<ObservableCollection<CityModel>>());
+            }
+            void AddCity()
+            {
+                try
+                {
+                    service.Add(nameToAdd);
+                    Update();
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+            async Task DeleteCity()
+            {
+                try
+                {
+                    await service.Delete(nameToDelete.Name);
+                    Update();
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+
+
 
         }
-
-        void Update()
-        {
-            Cities.Clear();
-
-            var list = service.GetSelected();
-            foreach (var x in list)
-            {
-                Cities.Add(x);
-            }
-            MessengerInstance.Send(new Message<ObservableCollection<CityModel>>());
-        }
-        void AddCity()
-        {
-            try
-            {
-                service.Add(nameToAdd);
-                Update();
-            }
-            catch(Exception ex)
-            {
-
-            }
-        }
-
-        public void DeleteCity()
-        {
-            try
-            {
-                
-                service.Delete(nameToDelete.Name);
-                Update();
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
-
-        
-        
     }
 }

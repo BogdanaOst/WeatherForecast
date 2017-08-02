@@ -27,3 +27,4 @@ C:\Users\Dana\Desktop\Weather\DAL\bin\Debug\EntityFramework.xml
 C:\Users\Dana\Desktop\Weather\DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Dana\Desktop\Weather\DAL\obj\Debug\DAL.dll
 C:\Users\Dana\Desktop\Weather\DAL\obj\Debug\DAL.pdb
+C:\Users\Dana\Desktop\Weather\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

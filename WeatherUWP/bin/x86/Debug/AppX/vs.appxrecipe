@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-08-02T11:05:56.522</Modified>
+      <Modified>2017-08-02T14:01:10.334</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\WeatherUWP.exe">
       <PackagePath>entrypoint\WeatherUWP.exe</PackagePath>
-      <Modified>2017-08-02T11:05:56.172</Modified>
+      <Modified>2017-08-02T14:01:09.995</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dana\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
@@ -584,11 +584,11 @@
     <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-08-02T11:00:45.922</Modified>
+      <Modified>2017-08-02T13:58:35.460</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Dana\Desktop\Weather\WeatherUWP\bin\x86\Debug\Core\WeatherUWP.exe">
       <PackagePath>WeatherUWP.exe</PackagePath>
-      <Modified>2017-08-02T11:05:56.518</Modified>
+      <Modified>2017-08-02T14:01:10.329</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
