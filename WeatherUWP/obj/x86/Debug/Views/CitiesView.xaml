@@ -8,8 +8,44 @@
     mc:Ignorable="d"
 	DataContext="{Binding CitiesVWInstance, Source={StaticResource Locator}}">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-     
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,50,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Text="{Binding nameToAdd, Mode=TwoWay}"
+                   Grid.Column="0"
+                   Grid.Row="0"
+                   Margin="10,0,0,0"
+                   PlaceholderText="Type new city"/>
+        <Button Content="Add"
+                Grid.Column="1"
+                Grid.Row="0"
+                Margin="10,0,0,0"
+                Command="{Binding AddCommand}"/>
+        
+        <Button Content="Delete"
+                Grid.Column="3"
+                Grid.Row="0"
+                Margin="10,0,0,0"
+                Command="{Binding DeleteCommand}"/>
+        <ListView Grid.ColumnSpan="4" Grid.Row="1" ItemsSource="{Binding Cities}" SelectedItem="{Binding nameToDelete, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock
+                    Text="{Binding Name}"
+                    TextAlignment="Center"
+                    />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+                  
     </Grid>
 </Page>
 

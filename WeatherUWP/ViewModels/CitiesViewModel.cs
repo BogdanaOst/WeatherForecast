@@ -12,24 +12,28 @@ namespace WeatherUWP.ViewModels
 {
     public class CitiesViewModel: ViewModelBase
     {
-        public ObservableCollection<CityModel> Cities { get; private set; }
+        public ObservableCollection<CityModel> Cities { get; set; }
         CityService service = new CityService();
+
         public ICommand AddCommand { get; set; }
         public ICommand DeleteCommand { get; set; }
+
         public string nameToAdd { get; set; }
-        public string nameToDelete { get; set; }
+        public CityModel nameToDelete { get; set; }
         public CitiesViewModel()
         {
 
             Cities = new ObservableCollection<CityModel>();
             Update();
             AddCommand = new RelayCommand(AddCity);
-            DeleteCommand = new RelayCommand<object>(DeleteCity);
+            DeleteCommand = new RelayCommand(DeleteCity);
+
         }
-       
+
         void Update()
         {
             Cities.Clear();
+
             var list = service.GetSelected();
             foreach (var x in list)
             {
@@ -50,12 +54,12 @@ namespace WeatherUWP.ViewModels
             }
         }
 
-        public void DeleteCity(object nameToDelete)
+        public void DeleteCity()
         {
             try
             {
                 
-                service.Delete(nameToDelete.ToString());
+                service.Delete(nameToDelete.Name);
                 Update();
             }
             catch (Exception ex)

@@ -11,22 +11,22 @@ namespace WeatherUWP.Services
 {
     public class CityService
     {
-        public IEnumerable<CityModel> GetSelected()
+        public async Task<IEnumerable<CityModel>> GetSelected()
         {
             var path = "http://localhost:59721/api/Cities";
             var client = new HttpClient();
             var response = client.GetAsync(path).Result;
-            var result = response.Content.ReadAsStringAsync().Result;
+            var result = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<IEnumerable<CityModel>>(result);
 
         }
-        public async void Add(string name)
+        public async Task Add(string name)
         {
             var path = "http://localhost:59721/api/Cities/?name="+name;
             var client = new HttpClient();
             await client.PostAsync(path,null);
         }
-        public async void Delete(string name)
+        public async Task Delete(string name)
         {
             var path = "http://localhost:59721/api/Cities/?name=" + name;
             var client = new HttpClient();
